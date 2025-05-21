@@ -24,3 +24,14 @@ Affinity is pinning the process to the socket
 Amazon VPC IP Address Manager -> to get Public IP insights
 EC2 User Data -> Bootstrap file when the instance first starts
 Security Groups -> Firewall attached, inbound and outbound rules
+
+====================================================================================
+On-Demand
+Spot
+Reserved ( Standard + Convertible )
+Dedicated Hosts
+Dedicated Instances
+
+Customer is responsible for OS patches and updates on EC2
+
+Compute Optimized -> High Performance Computing ( HPC ), batch processing, media transcoding, machine learning, scientific modeling, dedicated gaming servers
