@@ -1,0 +1,10 @@
+Dedicated Instances:
+    It is tied to one AWS account. The underlying hardware is dedicated to the AWS account.
+    The hardware wont be shared with any other AWS customers
+    It does not have visibility to core, sockets, affinity
+    When start / stop the hardware can be changed
+Dedicated hosts:
+    The underlying hardware can be shared within the AWS accounts of a AWS Organization
+    More useful for bring-your-own-licence ( BYOL ) software requirements
+    It has more visibility to core, sockets, affinity
+    When start / stop the hardware remains same or can be selected
