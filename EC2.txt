@@ -18,3 +18,7 @@ If a process is running on one socket, there will be cache stored in it. If the 
 Modern CPUs have multi-level caches ( L1, L2, L3 ) which is faster than RAM. 
 
 Affinity is pinning the process to the socket
+
+====================================================================================
+
+Amazon VPC IP Address Manager -> to get Public IP insights
