@@ -8,3 +8,13 @@ Dedicated hosts:
     More useful for bring-your-own-licence ( BYOL ) software requirements
     It has more visibility to core, sockets, affinity
     When start / stop the hardware remains same or can be selected
+
+
+CPU Socket is the connector on server's motherboard to insert the CPU. There can be multiple sockets.
+Every CPU has cores. Each core can have multiple threads.
+
+If a process is running on one socket, there will be cache stored in it. If the scheduler transfers that process to another socket that cache is wasted and new fetch is happened on another socket. This is waste of time and memory. 
+
+Modern CPUs have multi-level caches ( L1, L2, L3 ) which is faster than RAM. 
+
+Affinity is pinning the process to the socket
