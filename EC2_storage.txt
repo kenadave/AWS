@@ -28,3 +28,22 @@ EC2 Image builder ( Automates the creating, maintain, validate and test EC2 AMIs
   Create New AMI
   Test EC2 Instance
   Distribute the AMIs across the regions
+
+
+======================================================================================================
+
+EC2 Instance Store:
+  Hardware disk attached compared to EBS which is the network drive
+  Better throughput but ephemeral
+  Good for buffer/cache/scratch data/temporary content
+
+EFS:
+  Can be mounted on 100s EC2 compared to EBS where only one.
+  Only with Linux
+  Multi-AZ
+  No capacity planning compared to which is required in EBS
+
+**** what is a copy? EBS snapshot is a copy and not in-sync which can be used by other EC2 instance
+**** will EFS-IA get slow?
+
+in EFS, EFS mount target and all instances can see the same files
