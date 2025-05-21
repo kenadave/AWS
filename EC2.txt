@@ -22,3 +22,5 @@ Affinity is pinning the process to the socket
 ====================================================================================
 
 Amazon VPC IP Address Manager -> to get Public IP insights
+EC2 User Data -> Bootstrap file when the instance first starts
+Security Groups -> Firewall attached, inbound and outbound rules
