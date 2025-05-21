@@ -10,3 +10,21 @@ If need to move across AZ, use snapshots
 Snapshot features:
   Recyclebin & retention
   Move to archive tier, 75% cheaper but 24 to 72 hours to get the data restored
+  (Just for Knowledge) :
+      Compressed and de-deduplicated. So it need to uncompress and reassemble while retriving
+      The underlying hardware is slower. Used for high capacity not high throughput
+      Metadata storage in faster accessible one
+      Long-term storage in Tape or HDD
+      Read and write sequentially
+      Erasure coding : data is broken into fragments and parity bits are generated. Extreme durability and less storage overhead
+
+======================================================================================================
+
+AMI ( Amazon Machine Image ):
+  Pre-packaged so when instance launched using it, it does not take much time in boot-up
+
+EC2 Image builder ( Automates the creating, maintain, validate and test EC2 AMIs ) :
+  Create Builder EC2 Instance
+  Create New AMI
+  Test EC2 Instance
+  Distribute the AMIs across the regions
