@@ -1,0 +1,12 @@
+EBS:
+
+Attach network storage ( Elastic Block Store ) to EC2, to retain data even after termination.
+There is an attribute of "Delete on Termination". Ticked by-default for the root volume and not for the EBS
+1 EBS to 1 EC2 ( on CCP level )
+Bound to one AZ
+Attached through network, so latency
+If need to move across AZ, use snapshots
+
+Snapshot features:
+  Recyclebin & retention
+  Move to archive tier, 75% cheaper but 24 to 72 hours to get the data restored
