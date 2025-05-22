@@ -1,0 +1,10 @@
+Vertical Scalability: non-distributed system such as database.
+Horizontal Scalability: implies distributed systems
+  Auto Scaling Group
+  Load Balancer
+High Availability:
+  Auto Scaling Group multi AZ
+  Load Balancer multi AZ
+
+Scalability : out/in or up/down
+Elasticity : Auto-scaling. ELB is used for this.
