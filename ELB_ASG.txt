@@ -16,13 +16,22 @@ HTTP rides on TCP. First TCP is made then HTTP requests
 
 GENEVE : Generic Network Virtualization Encapsulation
 
-Application Load Balancer :
-Network Load Balancer : 
-Gateway Load Balancer : 
+Application Load Balancer : for HTTP/S
+Network Load Balancer : for TCP
+Gateway Load Balancer : for GENEVE ( layer 3 )
 
-Minimum size :
+It can be like once user hits the web application, it hits to the ALB, which is transferred to GLB for security. The 3rd party virtualization encapsulation is done and sent back to GLB. The request then reaches to the application. The application internally can connect with TCP for high performance in which NLB comes.
+
+Parameters for LB
+Minimum size : 
 Actual size :
 Maximum size :
 
 During ASG creation different AZs from a VPC can be selected. Also load balancer is selected. 
 ALB can be setup manually by adding instances. To automate it use ASG. For ASG, launch template also can be used.
+
+Auto scaling strategies:
+1) Simple/step
+2) Target
+3) Predictive
+4) Scheduled
