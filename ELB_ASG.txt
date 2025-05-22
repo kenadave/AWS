@@ -8,3 +8,21 @@ High Availability:
 
 Scalability : out/in or up/down
 Elasticity : Auto-scaling. ELB is used for this.
+
+
+TCP : Transmission Control Protocol ( layer 4 )
+HTTP : Hypertext Transfer Protocol ( layer 7 )
+HTTP rides on TCP. First TCP is made then HTTP requests
+
+GENEVE : Generic Network Virtualization Encapsulation
+
+Application Load Balancer :
+Network Load Balancer : 
+Gateway Load Balancer : 
+
+Minimum size :
+Actual size :
+Maximum size :
+
+During ASG creation different AZs from a VPC can be selected. Also load balancer is selected. 
+ALB can be setup manually by adding instances. To automate it use ASG. For ASG, launch template also can be used.
