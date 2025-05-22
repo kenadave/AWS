@@ -1,0 +1,2 @@
+ - Objects have a key which is full path
+ - The buckets are regional level but S3 service is global level
