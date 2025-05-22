@@ -22,7 +22,7 @@ Snapshot features:
 
 AMI ( Amazon Machine Image ):
   Pre-packaged so when instance launched using it, it does not take much time in boot-up
-
+  Can be used for software licence, configuration, OS, but not for IPs
 EC2 Image builder ( Automates the creating, maintain, validate and test EC2 AMIs ) :
   Create Builder EC2 Instance
   Create New AMI
@@ -47,3 +47,12 @@ EFS:
 **** will EFS-IA get slow?
 
 in EFS, EFS mount target and all instances can see the same files
+
+FSx:
+
+For linux: Fully Managed, high performance, scalable, HPC
+Machine learning, Analytics Video Processing, Finantial modeling
+millions of IOPS, 100s GBPS, sub-ms latencies
+Use S3
+
+For Windows File Server:
