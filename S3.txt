@@ -1,2 +1,19 @@
  - Objects have a key which is full path
  - The buckets are regional level but S3 service is global level
+
+Security :-
+   User Based
+   Resource Based
+
+IAM policy ALLOW OR Bucket policy ALLOW and there is no explicit DENY
+
+JSON based policy :
+     Resources : on which it should apply
+     Effect : Allow or Deny
+     Actions : API on which Effect will be applied
+     Principal : account or user on which policy will be applied
+
+Policies can be used to
+       force objects to be encrypted at upload
+       grant access to another account
+
