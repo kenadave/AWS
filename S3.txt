@@ -17,3 +17,15 @@ Policies can be used to
        force objects to be encrypted at upload
        grant access to another account
 
+S3 Replication:
+     Can be CRR or SRR ( same or cross )
+     Async
+     Versions need to be enabled in both source and destination buckets, buckets can be in different accounts
+     Use cases:
+         compliance
+         lower latency access
+         replication across accounts
+     Objects uploaded before setup wont be copied automatically. Different batch operation is required for this.
+     SRR use case:
+         consolidate the all types of logs from different places to one destination bucket.
+         replicate prod data to test env
