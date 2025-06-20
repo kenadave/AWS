@@ -29,3 +29,6 @@ S3 Replication:
      SRR use case:
          consolidate the all types of logs from different places to one destination bucket.
          replicate prod data to test env
+
+Snowball :
+    Storage optimized and Compute optimized
