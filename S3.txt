@@ -32,3 +32,10 @@ S3 Replication:
 
 Snowball :
     Storage optimized and Compute optimized
+    no charges for IN, charges for out and device usage
+    On Demand & Committed Upfront
+
+Block storage : EBS and EC2 Instance Store
+File : EFS
+Object storage : S3 and Glacier
+Storage Gateway : Bridge b/w on-prem and S3,EBS, and Glacier
