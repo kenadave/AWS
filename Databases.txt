@@ -1,0 +1,13 @@
+RDS managed by AWS:
+    Maintenanance window
+    OS patching
+    scaling
+    storage backed by EBS
+    multi AZ setup for DR
+    continous backup and restore ( point in time restore )
+    monitoring dashboards
+    read replicas for improved performance
+    We can't SSH into the instances
+
+
+RDS & Aurora
