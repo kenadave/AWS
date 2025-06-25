@@ -11,3 +11,21 @@ RDS managed by AWS:
 
 
 RDS & Aurora
+
+Read Replicas and Multi AZ
+
+15 Read replicas
+but only 1 Failover multi AZ (both read and write)
+Multi region read replica :
+        DR
+        local performance for global read
+
+ElastiCache : in-memory database
+              AWS managed Redis or memcached
+
+DynamoDB : replication across 3 AZ
+           NoSQL database
+           *serverless - milisecond latency*
+DAX : in-memory cache for DynamoDB
+    write also goes through DAX, TTL config, removing cold data from DAX, LRU eviction will prevent memory overhead
+    10X performance improvement
