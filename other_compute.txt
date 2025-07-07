@@ -3,3 +3,7 @@ EKS
 
 platform is provided by EBS
 instrastructure is built in CFT
+
+CodeDeploy:
+Hybrid service - works on both on-premises and cloud
+Used to deploy new version of the application on the servers
