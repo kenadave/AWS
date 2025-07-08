@@ -1,0 +1,7 @@
+VPC per region. If another region, then another VPC
+subnet associated with AZ
+
+
+IGW : for public subnet, 2 way connection
+NAT Gateway : for private subnet, one way connection, AWS managed
+NAT Instances : for private subnet, self managed
