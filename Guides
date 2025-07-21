@@ -1,3 +1,7 @@
 Connect from local for federated user:
     The credentials file will be downloaded when logged in. Install AWS CLI and open cmd where aws is present. 
     Use those Access Secret Key and Secret Key ID in aws configure command. 
+
+A Cloud Practitioner would like to get operational insights of its resources to quickly identify any issues that might impact applications using those resources. Which AWS service can help with this task?
+AWS Trusted Advisor : cant be correct answer as it does not give real time insights. It is about account level recommendations. The question is not about preventive static checks.
+AWS Health Dashboard : Does not give resource based insights.
