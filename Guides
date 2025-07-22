@@ -30,3 +30,8 @@ AMI should be in the same EC2 region. AMI region affects the launch eligibility 
 
 EBS is the block storage directly connected with EC2 so while optimizing it matters. While EFS, S3 are shared storage so Compute optimizer dont consider them
 Compute Optimizer considers EC2, ASG, Lambda too
+
+For ensuring right amount of instances : ASG
+Load balancer only transfers the traffic
+
+For modeling resources : Beanstalk is not the correct option. modeling resources means you create resources. While Beanstalk creates automatically
