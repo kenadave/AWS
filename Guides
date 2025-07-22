@@ -31,7 +31,36 @@ AMI should be in the same EC2 region. AMI region affects the launch eligibility 
 EBS is the block storage directly connected with EC2 so while optimizing it matters. While EFS, S3 are shared storage so Compute optimizer dont consider them
 Compute Optimizer considers EC2, ASG, Lambda too
 
+model resources is possible in Cloudformation and CDK but not in Elastic Beanstalk. EBS generates resources automatically. 
+
+EBS and instance store are block level storage.
+S3 is object level
+block level means like harddrive, raw data
+object level means like data on web which can be accessed through API
+
+X-Ray is used for debugging and tracing
+
+
+
 For ensuring right amount of instances : ASG
 Load balancer only transfers the traffic
 
 For modeling resources : Beanstalk is not the correct option. modeling resources means you create resources. While Beanstalk creates automatically
+
+AWS Organization can be used to create aws account automatically through createAccount API
+
+Availability means the system is available to use (Multi AZ deployment)
+Realiability means while using the system it does not fail in between (backups)
+Scalability (Read replica)
+Regional failover (Cross region Read replica)
+
+for regional failover read replicas are helpful as we have more time to do manual steps to make the system up
+for availability they are not as it should be failover automatically, without much time.
+
+For chef/puppet automation, OpsWorks is used.
+
+if a startup needs to quickly deploy a popular technology : AWS Partner Solutions ( not Code Deploy )
+
+AWS Edge location : for game delivery. 
+
+in case of 
