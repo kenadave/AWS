@@ -61,6 +61,14 @@ For chef/puppet automation, OpsWorks is used.
 
 if a startup needs to quickly deploy a popular technology : AWS Partner Solutions ( not Code Deploy )
 
-AWS Edge location : for game delivery. 
+AWS Edge location : for content delivery and not for game delivery. game require hosts and 2-way communication. it also requires compute and storage near to the user.
+AWS Local Zones : for low latency in real time applications like gaming. Above benefits included.
 
-in case of 
+Hardware Software Connectivity solutions : APN Technology Partner
+Professional services : APN Consulting Partner
+
+Sharing files across many ec2 instances : EFS
+EFS is a shared drive
+EBS is attached 1:1
+S3 is not a file storage
+Instance store is ephemeral
