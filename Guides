@@ -72,3 +72,12 @@ EFS is a shared drive
 EBS is attached 1:1
 S3 is not a file storage
 Instance store is ephemeral
+
+
+############################ PRACTICE TEST 1 ############################
+Security Group = Secutiry Guard = Only allow people in the list and dont do anything for others
+They work for a place (instance)
+
+NAT lets you call out but blocks call in
+
+We can choose our instance type and size for RDS
