@@ -81,3 +81,20 @@ They work for a place (instance)
 NAT lets you call out but blocks call in
 
 We can choose our instance type and size for RDS
+
+same region:
+        ec2 to s3 => free (data into)
+        s3 to ec2 => chargable (data out)
+
+EBS : 
+    same AZ one instance
+EFS :
+    multi AZ multi instances
+
+
+• CloudFront: 400+ edge locations = bigger attack surface
+• Route 53: DNS attacks can take down entire domains
+• Global Accelerator: Entry point to AWS global network
+
+Because of above, Sheild Advanced should be considered for above services
+
