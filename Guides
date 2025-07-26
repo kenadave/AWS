@@ -98,3 +98,16 @@ EFS :
 
 Because of above, Sheild Advanced should be considered for above services
 
+NAT Gateway : Private subnets to internet
+VPC Endpoint : Within applications in private subnet ()
+
+WAF (Web application firewall) only for application layer (layer 7)
+for layer 4, need TCP UDP DNS protection and WAF can only do for HTTP/HTTPS
+
+Really - RDS
+Efficient EC2
+Resources - Redshift
+Save - Sagemaker 
+Our - OpenSearch
+Daily - DynamoDB
+Spend
