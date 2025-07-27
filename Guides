@@ -73,6 +73,16 @@ EBS is attached 1:1
 S3 is not a file storage
 Instance store is ephemeral
 
+############################################################################################################################################
+Yes, AWS Systems MAnager (SSM) can definitely be used to schedule services or automate tasks, especially when you are working with EC2 instances. It works really well when combined with EventBridge to run tasks on a regular schedule -- for example, to start or stop instances, run scripts, or apply patches. But even though SSM is capable, it is not always the Go-To option in every scenario, and there are few reasons why.
+
+Sometimes, the task you want to schedule is really simple — like running a lightweight function once a day. In those cases, using something like EventBridge directly with Lambda is quicker and easier than setting up an SSM document or automation. On the other hand, if the process is complex or involves multiple steps, teams might prefer using Step Functions to manage the workflow more clearly.
+
+Another common reason is that SSM relies on the presence of the SSM Agent. If your setup doesn’t involve EC2 instances — say, you're using Fargate or just Lambda — then SSM wouldn’t be the right fit. Also, while SSM is great for system-level tasks, it's not always ideal for general-purpose scheduling, like triggering an API call or processing S3 data, unless you wrap all that logic into a script.
+
+There’s also the practicality factor — for very small or one-time tasks, setting up SSM automation, configuring roles, and scheduling it through EventBridge might feel like overkill when there are simpler options available. And sometimes, teams just stick to tools they’re more familiar with, like Lambda or Step Functions, especially if that’s already part of their workflow.
+
+So while SSM is a powerful tool for scheduled automation — particularly with EC2 — the reason it’s not always used comes down to context: the task, the environment, and how much setup makes sense for the job.
 
 ############################ PRACTICE TEST 1 ############################
 Security Group = Secutiry Guard = Only allow people in the list and dont do anything for others
@@ -111,3 +121,16 @@ Save - Sagemaker
 Our - OpenSearch
 Daily - DynamoDB
 Spend
+
+############################ PRACTICE TEST 2 ############################
+
+Elastic Beanstalk is not serverless - PaaS - gives access to underlying OS
+So if auto deployment + underlying ec2 access = Beanstalk
+
+ECS cant deploy the raw code automatically
+
+Storage Gateway Types:
+    Tape -G
+    Volume -S
+    File -S
+All used from on-prem to S3/Glacier
