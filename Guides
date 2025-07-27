@@ -84,6 +84,9 @@ There’s also the practicality factor — for very small or one-time tasks, set
 
 So while SSM is a powerful tool for scheduled automation — particularly with EC2 — the reason it’s not always used comes down to context: the task, the environment, and how much setup makes sense for the job.
 
+
+Platform perspective means technical side : So CTO, engineers
+
 ############################ PRACTICE TEST 1 ############################
 Security Group = Secutiry Guard = Only allow people in the list and dont do anything for others
 They work for a place (instance)
@@ -134,3 +137,22 @@ Storage Gateway Types:
     Volume -S
     File -S
 All used from on-prem to S3/Glacier
+
+Global scope:
+    internet faced : global accelerator, cloud front, 53
+    indentity : we dont make region based users IAM, Organizations, Control Tower, Artifacts
+    Security : WAF, Shield
+
+Guest OS : Customer - Linux/ Windows updates, Kernel Security Patches
+Host OS : AWS
+Database Engine patches : Both
+
+To Apply Patches on RDS : AWS responsibility
+
+In ECS : either EC2/fargate can be selected
+
+Only Enterprise has access to TAM
+On-Ramp has conceirge
+
+Enterprise > On-Ramp
+On-Ramp means on the way to Enterprise but have not reached still
