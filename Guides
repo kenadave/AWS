@@ -197,3 +197,21 @@ People needs to be trained, new env should be embraced, and everyone should be o
 Governance breaks RULES, STRUCTURE, and MEASUREMENTS to avoid chaos
 Infrastructure is the cloud engine - designing, building, managing
 Ops include prepare for changes, smooth fixes, monitoring
+
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+
+Geo-blocking : by WAF. SG wont work because it works at layer 4, controls instance traffic
+
+Each - envision
+Apple - Align
+Looks - Launch
+Sweet - Scale
+
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+
+Direct Connect : Private on-prem to AWS
+Transit Gateway : Hub router for VPCs, VPNs, Direct Connect
+Site-to-site VPN : Public on-prem to AWS
+PrivateLink : private connection between aws services
