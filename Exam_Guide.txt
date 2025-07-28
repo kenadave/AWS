@@ -1,1 +1,7 @@
 Review for "Select THREE" questions
+
+Root user access credentials are the email address and password used to create the AWS account :-
+  Question yourself, if it feels wrong then what are the email id pwd credentials? there must be some name. Imagine how we log in, what screen it displays when I used to log into free tier account?
+
+Which of the following AWS services are global in scope? (Select two)
+Ask for each service whether it is regional or global
