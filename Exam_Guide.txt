@@ -5,3 +5,7 @@ Root user access credentials are the email address and password used to create t
 
 Which of the following AWS services are global in scope? (Select two)
 Ask for each service whether it is regional or global
+
+
+paper-pen : create sentence with the word which is in brackets
+write keywords : try to map each with the options
