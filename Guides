@@ -228,6 +228,7 @@ Global Accelerator :
 Deploy automatically on existing EC2 : CodeDeploy, not EC2
 
 Billing Alarms : CloudWatch
+Alarms if the threshold goes down : Budgets. Have asked why not Trust Advisor
 Estimate cost : Calculator
 Forcast : Cost Explorer
 
@@ -244,3 +245,9 @@ Warm-standby strategy
 Pilot light strategy
 Backup and restore strategy
 
+Frequent/Standard Access = free
+Infrequent & Archive = charges
+Deeper the archive, cheaper the storage, expensive the retrieval
+
+VPC Gateway Endpoint : Great for 2:S3 and DynamoDB (connect through route table)
+VPC Interface Endpoint : Individual services via interfaces
