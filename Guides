@@ -224,3 +224,23 @@ Global Accelerator :
     good for non-http requests
     not used for static website hosting
     static ip address
+
+Deploy automatically on existing EC2 : CodeDeploy, not EC2
+
+Billing Alarms : CloudWatch
+Estimate cost : Calculator
+Forcast : Cost Explorer
+
+S3 Glacier is encrypted by default
+Trust Advisor creates alerts when 
+    1) cloudtrail is off
+    2) public access to s3 is on
+
+RDS : read replicas can be used in DR also
+
+AWS organization cost benefit in RIs only if the instances are in same AZ
+
+Warm-standby strategy
+Pilot light strategy
+Backup and restore strategy
+
