@@ -9,3 +9,6 @@ Ask for each service whether it is regional or global
 
 paper-pen : create sentence with the word which is in brackets
 write keywords : try to map each with the options
+
+
+check there is "only" and it is too restrictive
