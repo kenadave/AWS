@@ -215,3 +215,12 @@ Direct Connect : Private on-prem to AWS
 Transit Gateway : Hub router for VPCs, VPNs, Direct Connect
 Site-to-site VPN : Public on-prem to AWS
 PrivateLink : private connection between aws services
+
+
+
+############################ PRACTICE TEST 4 ############################
+
+Global Accelerator : 
+    good for non-http requests
+    not used for static website hosting
+    static ip address
