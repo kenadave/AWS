@@ -3,3 +3,8 @@
 1) EC2 instances can access files on an Amazon Elastic File System (Amazon EFS) file system across 
 many Availability Zones (AZ), Regions and VPCs
 
+2) Global in minutes means primary is "Global" and not "minutes". QUICK Innovations and keep things moving are part of "Agility".
+
+3) Tags must be enabled before reports. If they are enabled by default then report will be clumsy with too much of details.
+For each resource each tag must be unique and each tag can have only one value
+env tag cant have values as dev and prod
