@@ -11,3 +11,6 @@ env tag cant have values as dev and prod
 
 4) Tags cant help in getting seperate invoices. May help in logically seperate invoices. But for physically seperate invoices,
 one should have different AWS accounts.
+
+5) AWS Sheild Advanced is not included in any support plans. It saves from the cost incurred due to DDoS attack. Scaling will 
+happen and that will cause the money
