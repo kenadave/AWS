@@ -8,3 +8,6 @@ many Availability Zones (AZ), Regions and VPCs
 3) Tags must be enabled before reports. If they are enabled by default then report will be clumsy with too much of details.
 For each resource each tag must be unique and each tag can have only one value
 env tag cant have values as dev and prod
+
+4) Tags cant help in getting seperate invoices. May help in logically seperate invoices. But for physically seperate invoices,
+one should have different AWS accounts.
