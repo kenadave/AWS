@@ -12,3 +12,9 @@ write keywords : try to map each with the options
 
 
 check there is "only" and it is too restrictive
+
+
+comprehensive means long, detailed 
+
+simplest means logically and not strict physically 
+
