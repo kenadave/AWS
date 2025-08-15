@@ -14,3 +14,38 @@ one should have different AWS accounts.
 
 5) AWS Sheild Advanced is not included in any support plans. It saves from the cost incurred due to DDoS attack. Scaling will 
 happen and that will cause the money
+
+6) Glue is preparing data
+EME - Hadoop - Does analytics on prepared data
+
+7) API Access is cloudtrail and not cloudwatch
+
+8) Enhanced technical support starts with Business 
+
+Enhanced technical support by associates -=> Developer
+by Engineers => Business
+
+9) Audit requests made to S3 -> S3 Access logs
+
+10) Route 53 doesn't do IP Routing. It does Domain Registration, and health checks
+
+11) Datasync :- automated data from on-prem to aws with incremental backup
+Storage Gateway :- data stored on cloud, access locally with low latency
+
+12) FIS :- Chaos Engineering 
+
+13) VGW and CGW
+
+14) IPOS and volume types
+
+
+15) EC2 from one region to another: AMI
+
+16) Comprehensive means detailed
+
+17) simplest different invoices means logically and not strictly physically 
+
+
+18) TCO estimate means comparison of on-premises and AWS costs. Consider aspects which should be taken into consider
+
+19)
