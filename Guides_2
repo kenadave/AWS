@@ -92,3 +92,6 @@ above in Cloudtrail
 
 cloudtrail because using that only you know WHO did it
 using x-ray you trace and debug, for microservices, to know performance 
+
+30) KDS : raw pipeline, we decide where the data should go
+Firehose : readymade pipeline delivers data automatically to AWS
