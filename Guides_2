@@ -68,3 +68,8 @@ Appstream 2.0 : stream web app from AWS to a web browser
 23) Ultra low latency at edge locations through mobile networks : Wavelengths 
 
 Snowball edge is kind of offline
+
+24) Savings plans
+Compute: 66%, ec2-lambda-fargate
+EC2 instance: 72%
+SageMaker:64%
