@@ -48,4 +48,8 @@ Storage Gateway :- data stored on cloud, access locally with low latency
 
 18) TCO estimate means comparison of on-premises and AWS costs. Consider aspects which should be taken into consider
 
-19)
+19) WAF - CALA
+cloudFront
+Api gateway
+load balancer
+AppSync
