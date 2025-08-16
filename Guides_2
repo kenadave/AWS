@@ -62,4 +62,5 @@ Customer managed
 21) EFS is tied to VPC. So it's not global
 It will be difficult for consistency and low-latency
 
-22) 
+22) Workspaces : DaaS
+Appstream 2.0 : stream web app from AWS to a web browser 
