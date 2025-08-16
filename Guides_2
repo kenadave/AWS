@@ -77,3 +77,5 @@ SageMaker:64%
 25) Threat, unauthorised, malicious: GuardDuty - outside guard
 
 Inspector: inside vulnerabilities 
+
+26) ec2 image builder
