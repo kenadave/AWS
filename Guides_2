@@ -73,3 +73,7 @@ Snowball edge is kind of offline
 Compute: 66%, ec2-lambda-fargate
 EC2 instance: 72%
 SageMaker:64%
+
+25) Threat, unauthorised, malicious: GuardDuty - outside guard
+
+Inspector: inside vulnerabilities 
