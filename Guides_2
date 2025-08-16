@@ -86,3 +86,9 @@ Inspector: inside vulnerabilities
 Data events 
 Insights events
 above in Cloudtrail 
+
+29) A Security Group has been changed in an AWS account and the manager of the account has asked you to find out the details of the user who changed it. As a Cloud Practitioner, which AWS service will you use to fetch the necessary information?
+
+
+cloudtrail because using that only you know WHO did it
+using x-ray you trace and debug, for microservices, to know performance 
