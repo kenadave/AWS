@@ -58,3 +58,8 @@ AppSync
 20) AWS Owned
 AWS managed
 Customer managed
+
+21) EFS is tied to VPC. So it's not global
+It will be difficult for consistency and low-latency
+
+22) 
