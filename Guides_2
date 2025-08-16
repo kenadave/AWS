@@ -53,3 +53,8 @@ cloudFront
 Api gateway
 load balancer
 AppSync
+
+
+20) AWS Owned
+AWS managed
+Customer managed
