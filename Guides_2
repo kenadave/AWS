@@ -64,3 +64,7 @@ It will be difficult for consistency and low-latency
 
 22) Workspaces : DaaS
 Appstream 2.0 : stream web app from AWS to a web browser 
+
+23) Ultra low latency at edge locations through mobile networks : Wavelengths 
+
+Snowball edge is kind of offline
