@@ -2,3 +2,7 @@
 storage gateway doesn't create any api
 
 2) Architecture tool :- Well architectured diagram, solutions, best practices, patterns, etc
+
+3) EBS :- basic healthchecks using ec2 ans elb
+advanced health checks : granular metrics using ec2 agents, cloudwatch integrations
+it also checks if ASG has atleast one healthy instance 
