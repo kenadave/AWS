@@ -1,0 +1,2 @@
+1) Api gateway creates https api, rest api, websocket api. It can integrate with lambda, other aws services like kinesis datastream
+storage gateway doesn't create any api
