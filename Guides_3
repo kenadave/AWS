@@ -16,3 +16,9 @@ AWS countdown
 included in Enterprise support and available in business with additional fees
 
 6) subscribe to get 3rd party data: Data Exchange 
+
+7) For transaction email and password change notifications : SES
+
+8) Snowball edge : S3, EC2, Lambda
+
+9) DMS for continous/real-time replication and not useful for SNOW devices
