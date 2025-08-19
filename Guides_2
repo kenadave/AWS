@@ -16,7 +16,7 @@ one should have different AWS accounts.
 happen and that will cause the money
 
 6) Glue is preparing data
-EME - Hadoop - Does analytics on prepared data
+EMR - Hadoop - Does analytics on prepared data
 
 7) API Access is cloudtrail and not cloudwatch
 
