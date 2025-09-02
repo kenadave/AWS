@@ -13,3 +13,6 @@ EC2-Hibernate :
 
 4) ec2 instance connect uses port 22 because it uses SSH behind the scenes.
 SSM doesn't need any port and most secure way of connecting 
+
+5) one SG can contain another. While writing IP, select custom and add SG. 
+When one app needs to connect to another which is on another instance, update inbound rules of the target SG
