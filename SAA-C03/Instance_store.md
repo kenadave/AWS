@@ -23,3 +23,4 @@ high throughput but large chunk then low iops possible
    gp2, st1, sc1 has credit & bursts
 
 9) multi-attach only for io1 & io2
+upto 16 ec2 instances at a time
