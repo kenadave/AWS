@@ -16,5 +16,8 @@ high iops but small chunk then low throughput
 high throughput but large chunk then low iops possible 
 
 7) encrypted volumes are created by 
- - copying snapshot, encrypt it and create new volume out of it
- - while creating volume from a snapshot,select for encryption 
+   - copying snapshot, encrypt it and create new volume out of it
+   - while creating volume from a snapshot,select for encryption 
+
+8) gp3, io1, io2 consistent performance 
+   gp2, st1, sc1 has credit & bursts
