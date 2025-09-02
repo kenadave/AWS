@@ -9,3 +9,8 @@ independent IOPS :- gp3,io1,io2
 independent means IOPS can be increased without increasing the storage
 
 Provisioned IOPS
+
+6) io1 & io2 for high IOPS
+st1 & sc1 for high throughput
+high iops but small chunk then low throughput 
+high throughput but large chunk then low iops possible 
