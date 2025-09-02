@@ -5,3 +5,5 @@
 2) Recycle bin
    Archive Tier
    Fast snapshot restore (FSR)
+
+EBS volumme types lecture 
