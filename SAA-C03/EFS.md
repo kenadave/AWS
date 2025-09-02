@@ -9,3 +9,7 @@ Throughput mode
 a) standard 
 b) infrequent access 
 c) archive
+
+Provisioned:- provide a figure for the throughput
+Elastic:- no need to provide
+Bursting:- Baseline, credits, and Bursts in a limit
