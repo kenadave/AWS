@@ -8,7 +8,7 @@ independent IOPS :- gp3,io1,io2
 
 independent means IOPS can be increased without increasing the storage
 
-Provisioned IOPS
+Provisioned IOPS : database workloads sensitive to storage performance and consistency 
 
 6) io1 & io2 for high IOPS
 st1 & sc1 for high throughput
@@ -21,3 +21,5 @@ high throughput but large chunk then low iops possible
 
 8) gp3, io1, io2 consistent performance 
    gp2, st1, sc1 has credit & bursts
+
+9) multi-attach only for io1 & io2
