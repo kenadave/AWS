@@ -7,3 +7,5 @@ Due to low latency requirement, for boot purpose only gp & io are used and not H
 independent IOPS :- gp3,io1,io2
 
 independent means IOPS can be increased without increasing the storage
+
+Provisioned IOPS
