@@ -17,4 +17,5 @@ SSM doesn't need any port and most secure way of connecting
 5) one SG can contain another. While writing IP, select custom and add SG. 
 When one app needs to connect to another which is on another instance, update inbound rules of the target SG
 
-6) if one instance fails, DNS doesn't resolve automatically to new instance. Use load balancer or Elastic IPs in this cases to keep the client url constant 
+6) if one instance fails, DNS doesn't resolve automatically to new instance. Use load balancer or Elastic IPs in this cases to keep the client url constant
+7) Fleet of EC2 means not a single instance but a group of instances of different types and configurations.
