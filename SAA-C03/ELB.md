@@ -12,3 +12,4 @@ Questions:
   5) How ELB supports redirect? from http to https?
   6) How one ALB can support 2 independent routes?
   7) What about load balancer for SSH?
+  8) What is the usecase of having ELB in all the AZs while creating? 
