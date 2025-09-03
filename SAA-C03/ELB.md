@@ -13,3 +13,4 @@ Questions:
   6) How one ALB can support 2 independent routes?
   7) What about load balancer for SSH?
   8) What is the usecase of having ELB in all the AZs while creating? 
+  9) How health is identified within target groups while attaching them to the ELB?
