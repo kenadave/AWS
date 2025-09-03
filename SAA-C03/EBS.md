@@ -6,4 +6,5 @@
    Archive Tier
    Fast snapshot restore (FSR)
 
-EBS volumme types lecture 
+3) EBS volumme types lecture
+4) Multi-Attach is same EBS connected with multiple instances in same AZ
