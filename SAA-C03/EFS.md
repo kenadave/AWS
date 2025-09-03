@@ -19,3 +19,4 @@ EFS has SG-EFS & ec2 has SG-EC2 then sg-ec2 should have outbound rules & sg-efs 
 
 5) so efs created one/VPC. mount target created one/AZ
 
+6) EFS only for Linux.
