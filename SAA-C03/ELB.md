@@ -11,3 +11,4 @@ Questions:
   4) How to save time by these questions?
   5) How ELB supports redirect? from http to https?
   6) How one ALB can support 2 independent routes?
+  7) What about load balancer for SSH?
