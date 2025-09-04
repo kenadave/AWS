@@ -20,7 +20,17 @@
 
 9) SSL ( Secure Socket Layer ) used for encryption during transit
    TLS ( Transport Layer Security )
-   SNI ( server name indication ) solves multiple certificates on web server 
+   SNI ( server name indication ) solves multiple certificates on web server
+
+10) ASG can terminate instances which ALB mark as unhealthy
+    ASG based on cloudwatch alarms
+    Usecases of desired capacity and minimum capacity
+
+11) Dynamic scaling:
+              a) Target
+              b) Simple / Step
+    Scheduled scaling
+    Predictive scaling: based on forecase
 Questions:
   1) Is websocket at layer 7?
   2) How to manage notes on git, on udemy, and the questions?
@@ -40,6 +50,9 @@ Questions:
   15) Steps to enable the load balancers and security group configurations
   16) Why NLB does not need cookie for sticky session?
   17) Does duration factor impact in Application based cookies?
+  18) Scheduled scaling also has forcast?
+  19) Difference between simple and step scaling? Both are based on cloudwatch metrics?
+  20) When I configure scaling policies, cloudwatch alarms are automatically shown in cloudwatch?
 
 Notes:
   1) Revise ALB & NLB videos, hands on for the steps
