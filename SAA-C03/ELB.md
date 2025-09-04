@@ -30,7 +30,9 @@
               a) Target
               b) Simple / Step
     Scheduled scaling
-    Predictive scaling: based on forecase
+    Predictive scaling: based on forecast
+
+
 Questions:
   1) Is websocket at layer 7?
   2) How to manage notes on git, on udemy, and the questions?
