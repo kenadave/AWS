@@ -44,6 +44,7 @@ Questions:
      applications across machines?
   4) How to save time by these questions?
   5) How ELB supports redirect? from http to https?
+     2 listeners. One for http & another for https. User don't need to specify https in the browser.
   6) How one ALB can support 2 independent routes?
   7) What about load balancer for SSH?
   8) What is the usecase of having ELB in all the AZs while creating? 
