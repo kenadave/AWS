@@ -46,18 +46,24 @@ Questions:
   5) How ELB supports redirect? from http to https?
      2 listeners. One for http & another for https. User don't need to specify https in the browser.
   6) How one ALB can support 2 independent routes?
+          same as aboe
   7) What about load balancer for SSH?
+          Not a usecase actually
   8) What is the usecase of having ELB in all the AZs while creating? 
+          Failover, HA
   9) How health is identified within target groups while attaching them to the ELB?
   10) Why NLB with private ip addresses only?
+           Mostly used inside VPC. Can be used with public IP also
   11) How NLB supports health checks of HTTP, HTTPS?
   12) Why listeners on the load balancers need port and protocol, but not the ip address?
   13) How Lambda can give TCP/UDP which can be connected with NLB? There should be multiple lambdas to redirect?
   14) How ALB can give TCP/UDP which can be connected with NLB? There should be multiple ALBs to redirect?
+
 Elastic IP or PrivateLink scenario. NLB receives connection on one IP. It routes to ALB. ALB then does layer 7 routing. So benefits of both static IP + ALB routing rules
 
   15) Steps to enable the load balancers and security group configurations
-  16) Why NLB does not need cookie for sticky session?
+  16) Why NLB does not need cookie for sticky session? 
+          NLB does not need cookies for sticky session. It uses hash for the same. It can't see HTTP header and so cant see cookies
   17) Does duration factor impact in Application based cookies?
   18) Scheduled scaling also has forcast?
   19) Difference between simple and step scaling? Both are based on cloudwatch metrics?
