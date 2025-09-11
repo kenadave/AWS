@@ -8,8 +8,9 @@ Parameters:
     Default: example.com
   
   KeyPairName:
-    Type: AWS::EC2::KeyPair::KeyName
-    Description: EC2 Key Pair for SSH access
+    Type: String
+    Description: EC2 Key Pair for SSH access (leave empty to disable SSH)
+    Default: ""
   
   InstanceType:
     Type: String
@@ -20,6 +21,9 @@ Parameters:
   PrimaryHostedZoneId:
     Type: String
     Description: Hosted Zone ID from primary region
+
+Conditions:
+  HasKeyPair: !Not [!Equals [!Ref KeyPairName, ""]]
 
 Resources:
   # VPC for secondary region
@@ -191,7 +195,7 @@ Resources:
     Properties:
       ImageId: ami-0c02fb55956c7d316
       InstanceType: !Ref InstanceType
-      KeyName: !Ref KeyPairName
+      KeyName: !If [HasKeyPair, !Ref KeyPairName, !Ref "AWS::NoValue"]
       SubnetId: !Ref PublicSubnet1
       SecurityGroupIds:
         - !Ref InstanceSecurityGroup
@@ -213,7 +217,7 @@ Resources:
     Properties:
       ImageId: ami-0c02fb55956c7d316
       InstanceType: !Ref InstanceType
-      KeyName: !Ref KeyPairName
+      KeyName: !If [HasKeyPair, !Ref KeyPairName, !Ref "AWS::NoValue"]
       SubnetId: !Ref PublicSubnet2
       SecurityGroupIds:
         - !Ref InstanceSecurityGroup
