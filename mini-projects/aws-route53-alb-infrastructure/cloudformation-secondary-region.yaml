@@ -215,7 +215,7 @@ Resources:
   EC2Instance2:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0c2d3e23f757b5d84
+      ImageId: ami-05ce11b4c853b9509
       InstanceType: !Ref InstanceType
       KeyName: !If [HasKeyPair, !Ref KeyPairName, !Ref "AWS::NoValue"]
       SubnetId: !Ref PublicSubnet2
