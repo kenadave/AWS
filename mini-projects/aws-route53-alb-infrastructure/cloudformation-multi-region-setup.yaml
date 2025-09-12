@@ -245,6 +245,8 @@ Resources:
       HostedZoneId: !Ref HostedZone
       Name: !Sub 'app.${DomainName}'
       Type: A
+      SetIdentifier: !Sub 'Primary-${AWS::Region}'
+      Weight: 50 
       AliasTarget:
         DNSName: !GetAtt ApplicationLoadBalancer.DNSName
         HostedZoneId: !GetAtt ApplicationLoadBalancer.CanonicalHostedZoneID
