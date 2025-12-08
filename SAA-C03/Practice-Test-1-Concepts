@@ -1,0 +1,2 @@
+In ASG if unhealthy instances detected, then terminate first and then launch new is followed and not
+launch new first and then terminate. This is due to maintain the "desired capacity" defined.
