@@ -10,3 +10,9 @@ AZ Rebalancing	Launch → Terminate	Instances are healthy (working fine)
 3) For example, your application can achieve at least 3,500 PUT/COPY/POST/DELETE or 5,500 GET/HEAD requests per second per prefix in a bucket.
 
 4) Whenever an AMI is moved from one region to another, snapshot is also moved together
+
+5) Simple ranking by price per GB:
+
+S3 Standard: ~$0.023/GB/month (CHEAPEST - pay for what you use)
+EBS gp2: ~$0.10/GB/month (MIDDLE - but pay for provisioned capacity)
+EFS Standard: ~$0.30/GB/month (MOST EXPENSIVE - but pay for what you use)
