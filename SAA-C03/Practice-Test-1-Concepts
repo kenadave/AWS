@@ -8,3 +8,5 @@ AZ Rebalancing	Launch → Terminate	Instances are healthy (working fine)
 2) Each time you use S3 Transfer Acceleration to upload an object, we will check whether the service is likely to be faster than a regular Amazon S3 transfer. If we determine that it is not likely to be faster than a regular Amazon S3 transfer of the same object to the same destination AWS Region, we will not charge for that use of S3 Transfer Acceleration for that transfer, and may bypass the S3 Transfer Acceleration system for that upload.
 
 3) For example, your application can achieve at least 3,500 PUT/COPY/POST/DELETE or 5,500 GET/HEAD requests per second per prefix in a bucket.
+
+4) Whenever an AMI is moved from one region to another, snapshot is also moved together
