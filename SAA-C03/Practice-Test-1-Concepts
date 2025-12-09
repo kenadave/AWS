@@ -16,3 +16,14 @@ AZ Rebalancing	Launch → Terminate	Instances are healthy (working fine)
 S3 Standard: ~$0.023/GB/month (CHEAPEST - pay for what you use)
 EBS gp2: ~$0.10/GB/month (MIDDLE - but pay for provisioned capacity)
 EFS Standard: ~$0.30/GB/month (MOST EXPENSIVE - but pay for what you use)
+
+6) 
+Critical limitation: Kinesis Data Firehose cannot write directly to DynamoDB
+
+Kinesis Data Firehose supported destinations are:
+
+Amazon S3
+Amazon Redshift (via S3)
+Amazon OpenSearch Service
+HTTP endpoints
+Datadog, Splunk, New Relic, MongoDB (third-party)
