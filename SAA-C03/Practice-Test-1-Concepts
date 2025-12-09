@@ -1,6 +1,8 @@
-In ASG if unhealthy instances detected, then terminate first and then launch new is followed and not
+1) In ASG if unhealthy instances detected, then terminate first and then launch new is followed and not
 launch new first and then terminate. This is due to maintain the "desired capacity" defined.
 
 Scenario	Order	Why
 Health Check Replacement	Terminate → Launch	Instance is unhealthy (already broken)
 AZ Rebalancing	Launch → Terminate	Instances are healthy (working fine)
+
+2) Each time you use S3 Transfer Acceleration to upload an object, we will check whether the service is likely to be faster than a regular Amazon S3 transfer. If we determine that it is not likely to be faster than a regular Amazon S3 transfer of the same object to the same destination AWS Region, we will not charge for that use of S3 Transfer Acceleration for that transfer, and may bypass the S3 Transfer Acceleration system for that upload.
