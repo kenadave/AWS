@@ -19,3 +19,13 @@ Why use it? You already have a mature identity system and don't want to create a
 Best for: Internal corporate apps where you only want employees to log in using the company's existing SSO provider (like Okta or Azure AD) and you don't need to manage extra "AWS-only" data about them. 
 
 6) LambdaTargetProcessedBytes and StandardProcessedBytes
+
+7)  Network Load Balancer automatically provides a static IP per Availability Zone (AZ) to the load balancer
+
+8)  Yes, you can use Amazon Route 53 health checking and DNS failover features to enhance the availability of the applications running behind Network Load Balancers.
+
+9)  For each associated subnet a Network Load Balancer is in, the Network Load Balancer can only support a single public/internet facing IP address.
+
+10)  Correct. Cross-zone load balancing is always enabled by default for ALBs, but it is disabled by default for NLBs
+
+11)  
