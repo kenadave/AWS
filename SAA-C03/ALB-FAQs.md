@@ -28,4 +28,5 @@ Best for: Internal corporate apps where you only want employees to log in using 
 
 10)  Correct. Cross-zone load balancing is always enabled by default for ALBs, but it is disabled by default for NLBs
 
+11) The Health Check Requirement: If your LB cannot "hear" the response from the target because a rule is blocking it, the LB will mark the target as Unhealthy, even if the application is running perfectly.
 11)  
