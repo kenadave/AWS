@@ -30,4 +30,18 @@ For all other endpoints, you can specify either the DNS name (e.g. www.example.c
 
 15) Amazon Route 53 Resolver DNS Firewall works together with AWS Firewall Manager so you can build policies based on DNS Firewall rules, and then centrally apply those policies across your VPCs and accounts.
 
-16) 
+16) Amazon Route 53 Profiles allow you to easily manage DNS configurations across your entire organization by creating one or more sharable configurations, in the form of a Profile. With Profiles, you can combine various configurations such as private hosted zone (PHZ) associations, Resolver rules, and Route 53 Resolver DNS Firewall rule groups within one RAM-shareable configuration. By sharing the Profile across AWS accounts and associating it with the Amazon Virtual Private Clouds (VPCs), you have an easy way to ensure that all VPCs have the same DNS configuration without the complexity of managing separate resources.
+
+17) Yes, you can create one or more Profiles per account. However, you can only associate one Profile per VPC at a time.
+
+18) No, you cannot share a Profile across AWS Regions
+
+19) Route 53 Global Resolver is a global, internet-reachable DNS resolver that enables you to easily resolve and forward traffic for both public and private domains, while ensuring security and authenticity of the queries over the internet.
+
+20) Managed Domain Lists contain domain names that are associated with malicious activity or other potential threats.
+
+21) Global Resolver has multiple mechanisms in place to mitigate DDoS threats: 1) Global Resolver relies on AWS Shield to protect customers AGA endpoints. 2) Global Resolver also has a custom dynamic DDoS implementation using top talker metrics and rate limits based on dynamic rules updated by the Route53 service team at the time of any impact. This allows Global Resolver to quickly respond in the case of a high volume or rate of failures from specific source IPs. It will also build default throttling and load shedding.
+
+22) 
+
+23) 
