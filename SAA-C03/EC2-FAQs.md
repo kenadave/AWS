@@ -28,4 +28,14 @@ Stopped	Persists	Deleted	No instance fee; pay for EBS storage.
 Hibernated	Persists	Saved to EBS Root	No instance fee; pay for EBS storage (including RAM file).
 Terminated	Deleted (by default)	Deleted	No more charges.
 
-10) 
+10) No, an RI is associated with a specific region, which is fixed for the duration of the reservation's term.
+
+11) When you exchange one Convertible RI for another, EC2 ensures that the total value of the Convertible RIs is maintained through a conversion. So, if you are converting your RI with a total value of $1000 for another RI, you will receive a quantity of Convertible RIs with a value that’s equal to or greater than $1000. You cannot convert your Convertible RI for Convertible RI(s) of a lesser total value.
+
+12) For example, let’s say you purchased one No Upfront Convertible RI (A) with a $0.10/hr rate, and you decide to exchange Convertible RI A for another RI (B) that costs $0.06/hr. When you convert, you will receive two RIs of B because the amount that you pay on an hourly basis must be greater than or equal to the amount you’re paying for A on an hourly basis.
+
+13) Yes, you can upgrade the payment option associated with your RI. For example, you can exchange your No Upfront RIs for Partial or All Upfront RIs to benefit from better pricing. You cannot change the payment option from All Upfront to No Upfront, and cannot change from Partial Upfront to No Upfront.
+
+14) With a single API call, EC2 Fleet lets you provision compute capacity across different instance types, Availability Zones and across On-Demand, Reserved Instances (RI) and Spot Instances purchase models to help optimize scale, performance and cost.
+
+15) 
