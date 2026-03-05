@@ -34,4 +34,9 @@ Data is not automatically copied from existing instances to new instances. You c
 
 10) If you are using Elastic Load Balancing (ELB) with your group, you should select an ELB health check. If you’re not using ELB with your group, you should select the EC2 health check.
 
-11) 
+11) When ELB notices that the instance is unhealthy, it will stop routing requests to it. However, prior to discovering that the instance is unhealthy, some requests to that instance will fail.
+
+12) Vertical Health (One instance, multiple groups): If it fails anywhere, it is unhealthy everywhere (for that instance).
+Horizontal Health (Many instances, one group): If one instance fails, it does not make its healthy neighbors unhealthy.
+
+13) 
