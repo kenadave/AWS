@@ -40,5 +40,6 @@ Terminated	Deleted (by default)	Deleted	No more charges.
 
 15) Savings Plans or Regional Reserved Instance (RI) discounts apply to Capacity Reservations but not to capacity blocks.
 
-16) 
+16) ODCR+Region RI = Zonal RI. ODCR will reserve capactiy but Regional RI will give discounts.
+ODCR+Savings plan=Zonal RI+brain. Savings plan will give more flexibility as it can be shifted accross services/instances.
 
