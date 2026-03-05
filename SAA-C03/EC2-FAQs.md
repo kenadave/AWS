@@ -38,4 +38,7 @@ Terminated	Deleted (by default)	Deleted	No more charges.
 
 14) With a single API call, EC2 Fleet lets you provision compute capacity across different instance types, Availability Zones and across On-Demand, Reserved Instances (RI) and Spot Instances purchase models to help optimize scale, performance and cost.
 
-15) 
+15) Savings Plans or Regional Reserved Instance (RI) discounts apply to Capacity Reservations but not to capacity blocks.
+
+16) 
+
