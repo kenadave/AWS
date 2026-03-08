@@ -1,0 +1,9 @@
+1) Amazon ECS on AWS Outposts follows the same model as Amazon EC2 Launch Type.
+
+2) Amazon ECS is a highly scalable container orchestration service that allows you to run and manage distributed applications that run in containers. AWS Lambda is an event-driven task compute service that runs your code in response to “events” such as changes in data, website clicks, or messages from other AWS services without you having to manage any compute infrastructure. Many applications use both of these constructs in production, and customers often use both to take advantage of their respective benefits.
+
+3) Amazon ECS Service Connect simplifies service discovery, connectivity, and traffic observability while Amazon ECS CloudWatch Container Insights collects, aggregates, and summarizes metrics and logs. When you desire more control over the characteristics of how your applications run, Amazon ECS on Amazon EC2 is available, as well as Amazon ECS Anywhere, for when you want to run container workloads on your infrastructure. Collectively, Amazon ECS on AWS Fargate, Amazon ECS on Amazon EC2, and Amazon ECS Anywhere give you the ability to run a wide variety of applications all with the same experience and tooling. Given this, over 65% of all new AWS container customers use Amazon ECS.
+
+4) With AWS you have a comprehensive choice of serverless compute options including Amazon ECS with AWS Fargate and AWS Lambda, a serverless compute service that runs your code in response to events with Event-Driven Architecture (EDA) and automatically manages the underlying compute resources for you. You can use one or more of these compute choices depending on your use case. Whether it’s Amazon ECS with AWS Fargate or AWS Lambda, AWS serverless choices deliver the advantages of scale, agility, and cost that serverless compute provides.
+
+5) 
