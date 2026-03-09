@@ -33,4 +33,19 @@ This option allows for specialized hardware and pricing models (like Reserved In
 
 14) Yes, Amazon ECS Managed Instances supports privileged Linux capabilities, including CAP_NET_ADMIN for network operations, CAP_SYS_ADMIN for system administration, and CAP_BPF for Berkeley Packet Filter programs. This enables advanced monitoring, observability, and security solutions that require elevated privileges.
 
-15) 
+15) Amazon ECS Express Mode simplifies application deployment on Amazon ECS by eliminating complex infrastructure setup and configuration decisions. Getting started with Amazon ECS Express Mode requires only a container image and IAM task execution and infrastructure roles.
+
+By default, Express Mode creates services using AWS Fargate and includes an Application Load Balancer (ALB) for handling incoming traffic. 
+
+1. Underlying Resources (Visible in Both)
+When you use ECS Express Mode, it automatically creates standard AWS resources in your account. You can see, modify, or delete these at any time in their respective consoles: 
+Networking: VPCs, Subnets, and Security Groups.
+Load Balancing: Application Load Balancers (ALBs) and Target Groups.
+Management: ECS Clusters, Task Definitions, and Service definitions.
+Others: Route 53 records and ACM certificates. 
+
+If you use regular ECS Fargate, you have to create these same resources yourself (or via code), but once created, they are just as visible as those created by Express Mode. 
+2. Underlying Infrastructure (Hidden in Both)
+The "underlying infrastructure" refers to the physical servers and virtual machines (EC2) that run your containers.
+Because ECS Express Mode only supports Fargate, you will never see EC2 instances in your account for these services.
+In standard Fargate, these servers are also managed by AWS and are not visible in your EC2 dashboard.
