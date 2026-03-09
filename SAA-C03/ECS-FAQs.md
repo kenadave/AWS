@@ -6,4 +6,8 @@
 
 4) With AWS you have a comprehensive choice of serverless compute options including Amazon ECS with AWS Fargate and AWS Lambda, a serverless compute service that runs your code in response to events with Event-Driven Architecture (EDA) and automatically manages the underlying compute resources for you. You can use one or more of these compute choices depending on your use case. Whether it’s Amazon ECS with AWS Fargate or AWS Lambda, AWS serverless choices deliver the advantages of scale, agility, and cost that serverless compute provides.
 
-5) 
+5)Amazon ECS Service Connect simplifies service discovery, connectivity, and traffic observability while Amazon ECS CloudWatch Container Insights collects, aggregates, and summarizes metrics and logs.
+
+6) Amazon ECS Anywhere is a feature of Amazon ECS that lets you run and manage containerized workloads on your own infrastructure, such as on-premises virtual machines (VMs), bare-metal servers, or even edge devices like a Raspberry Pi.
+
+7) 
