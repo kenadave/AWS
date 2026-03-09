@@ -10,4 +10,4 @@
 
 6) Amazon ECS Anywhere is a feature of Amazon ECS that lets you run and manage containerized workloads on your own infrastructure, such as on-premises virtual machines (VMs), bare-metal servers, or even edge devices like a Raspberry Pi.
 
-7) 
+7) Amazon ECS measures service utilization based on CPU and memory resources consumed by the tasks that belong to a service and publishes CloudWatch metrics, namely, **ECSServiceAverageCPUUtilization** and **ECSServiceAverageMemoryUtilization**, with this data. Application Auto Scaling can then use these predefined metrics in conjunction with scaling policies to proportionally scale the number of tasks in a service.
