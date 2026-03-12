@@ -22,3 +22,23 @@ Immutable Dependency Chains: Some resources cannot be fully cleared until their 
 
 Common Error Codes:
 AWS/Azure: OperationNotAllowed or ResourceQuotaExceeded.
+
+
+9) Because Route 53 health checks monitor CloudWatch data streams instead of the state of CloudWatch alarms, you can't force the status of a health check to change by using the CloudWatch SetAlarmState API operation.
+
+10) When using AWS Direct Connect to connect your on-premises network to AWS, you can achieve maximum network resiliency (SLA of 99.99%) by using separate connections that end on distinct devices in more than one on-premises location and more than one AWS Direct Connect location.
+
+11) lternatively, you can achieve high resiliency (SLA of 99.9%) by using two individual connections to multiple locations (each on-premises location connected to a single Direct Connect location).
+
+12) maximum network resiliency (SLA of 99.99%) by using separate connections that end on distinct devices in more than one on-premises location and more than one AWS Direct Connect location.
+
+13) Alternatively, you can achieve high resiliency (SLA of 99.9%) by using two individual connections to multiple locations (each on-premises location connected to a single Direct Connect location).
+
+14) ECMP (Equal-Cost Multi-Path) routing allows you to achieve an aggregate throughput of up to 50 Gbps by logically bonding multiple individual VPN tunnels and distributing traffic across them. 
+
+While a standard AWS Site-to-Site VPN tunnel is capped at 1.25 Gbps, ECMP enables the following: 
+-  Horizontal Scaling: By establishing multiple VPN connections to an AWS Transit Gateway and enabling ECMP, the gateway can use up to 50 parallel paths simultaneously.
+-  Traffic Distribution: The Transit Gateway uses a 5-tuple hash (source/destination IP, source/destination port, and protocol) to decide which tunnel to use for a specific packet.
+-  Aggregate Capacity: While no single network flow can exceed the 1.25 Gbps limit of a single tunnel, the sum of many different flows across multiple tunnels can scale up to the 50 Gbps aggregate limit.
+-  Dynamic Routing Requirement: To use ECMP, your VPN must be configured with dynamic routing (BGP); static routing does not support this feature.
+
