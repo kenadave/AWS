@@ -42,3 +42,16 @@ While a standard AWS Site-to-Site VPN tunnel is capped at 1.25 Gbps, ECMP enable
 -  Aggregate Capacity: While no single network flow can exceed the 1.25 Gbps limit of a single tunnel, the sum of many different flows across multiple tunnels can scale up to the 50 Gbps aggregate limit.
 -  Dynamic Routing Requirement: To use ECMP, your VPN must be configured with dynamic routing (BGP); static routing does not support this feature.
 
+15) Make use of an IPAM, such as the Amazon VPC IP Address Manager, to monitor and manage your CIDR use. 
+You can use IPAM to do the following:
+Organize IP address space into routing and security domains
+Monitor IP address space that's in use and monitor resources that are using space against business rules
+View the history of IP address assignments in your organization
+Automatically allocate CIDRs to VPCs using specific business rules
+Troubleshoot network connectivity issues
+Enable cross-region and cross-account sharing of your Bring Your Own IP (BYOIP) addresses
+Provision Amazon-provided contiguous IPv6 CIDR blocks to pools for VPC creation
+
+16) Identify overlapping IP ranges. You can either migrate to a new range of addresses or consider using techniques like private NAT Gateway or AWS PrivateLink if you need to connect the overlapping ranges.
+End of support notice: On September 30, 2026, AWS will discontinue support for AWS App Mesh. After September 30, 2026, you will no longer be able to access the AWS App Mesh console or AWS App Mesh resources.
+AWS Cloud Map is a cloud resource discovery service. With Cloud Map, you can define custom names for your application resources, and it maintains the updated location of these dynamically changing resources. This increases your application availability because your web service always discovers the most up-to-date locations of its resources.
