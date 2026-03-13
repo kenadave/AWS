@@ -55,3 +55,10 @@ Provision Amazon-provided contiguous IPv6 CIDR blocks to pools for VPC creation
 16) Identify overlapping IP ranges. You can either migrate to a new range of addresses or consider using techniques like private NAT Gateway or AWS PrivateLink if you need to connect the overlapping ranges.
 End of support notice: On September 30, 2026, AWS will discontinue support for AWS App Mesh. After September 30, 2026, you will no longer be able to access the AWS App Mesh console or AWS App Mesh resources.
 AWS Cloud Map is a cloud resource discovery service. With Cloud Map, you can define custom names for your application resources, and it maintains the updated location of these dynamically changing resources. This increases your application availability because your web service always discovers the most up-to-date locations of its resources.
+
+
+
+=========================================================================
+What problem?
+What architecture pattern fixes it?
+which AWS Service implements it?
