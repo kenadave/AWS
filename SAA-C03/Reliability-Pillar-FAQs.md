@@ -59,6 +59,11 @@ AWS Cloud Map is a cloud resource discovery service. With Cloud Map, you can def
 
 
 =========================================================================
+
 What problem?
 What architecture pattern fixes it?
 which AWS Service implements it?
+
+=========================================================================
+
+Idempotency is also an important behavior of event-driven architectures. These architectures are typically backed by a message queue such as Amazon SQS, Amazon MQ, Amazon Kinesis Streams, or Amazon Managed Streaming for Apache Kafka (MSK).
