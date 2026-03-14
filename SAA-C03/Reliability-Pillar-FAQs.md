@@ -67,3 +67,19 @@ which AWS Service implements it?
 =========================================================================
 
 Idempotency is also an important behavior of event-driven architectures. These architectures are typically backed by a message queue such as Amazon SQS, Amazon MQ, Amazon Kinesis Streams, or Amazon Managed Streaming for Apache Kafka (MSK).
+
+If your workload leverages AWS Lambda functions, consider Powertools for AWS Lambda. Powertools for AWS Lambda is a developer toolkit that helps implement serverless best practices and increase developer velocity when you work with AWS Lambda functions. In particular, it provides a utility to convert your Lambda functions into idempotent operations which are safe to retry.
+
+If a dependency fails: Don't crash; show "Stale" or "Partial" data.
+If the DB is slow: Use Read Replicas for reads and SQS for writes.
+If an update fails halfway: Use Step Functions (Saga Pattern) to roll back.
+If the network is flaky: Use Retries with Exponential Backoff and Jitter.
+
+You will see this algorithm mentioned specifically with Amazon API Gateway.
+Standard Limit: The steady refill rate.
+Burst Limit: The maximum bucket size.
+Exam Tip: If a question asks how to handle a sudden, short-lived spike in traffic without failing, ensure your Burst Limit (Bucket Size) is high enough to handle that initial wave.
+
+Amazon API Gateway implements the token bucket algorithm according to account and region limits and can be configured per-client with usage plans. Additionally, Amazon Simple Queue Service (Amazon SQS) and Amazon Kinesis can buffer requests to smooth out the request rate, and allow higher throttling rates for requests that can be addressed. Finally, you can implement rate limiting with AWS WAF to throttle specific API consumers that generate unusually high load.
+
+You can configure API Gateway with throttling limits for your APIs and return 429 Too Many Requests errors when limits are exceeded. You can use AWS WAF with your AWS AppSync and API Gateway endpoints to enable rate limiting on a per IP address basis.
