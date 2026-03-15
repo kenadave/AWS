@@ -91,3 +91,8 @@ WAF on API Gateway & AppSync => rate limiting rules
 More throttling control => API Gateway+AppSync
 SQS+Lambda => maximum concurrency
 API Gateway+SQS/Kinesis => Buffer requests
+
+=========================================================================
+
+
+Configuring first in first out (FIFO) queues when last in first out (LIFO) queues would better serve client needs, for example when strict ordering is not required and backlog processing is delaying all new and time sensitive requests resulting in all clients experiencing breached service levels.
