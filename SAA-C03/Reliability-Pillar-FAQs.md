@@ -83,3 +83,11 @@ Exam Tip: If a question asks how to handle a sudden, short-lived spike in traffi
 Amazon API Gateway implements the token bucket algorithm according to account and region limits and can be configured per-client with usage plans. Additionally, Amazon Simple Queue Service (Amazon SQS) and Amazon Kinesis can buffer requests to smooth out the request rate, and allow higher throttling rates for requests that can be addressed. Finally, you can implement rate limiting with AWS WAF to throttle specific API consumers that generate unusually high load.
 
 You can configure API Gateway with throttling limits for your APIs and return 429 Too Many Requests errors when limits are exceeded. You can use AWS WAF with your AWS AppSync and API Gateway endpoints to enable rate limiting on a per IP address basis.
+
+=========================================================================
+
+API Gateway => Throttling limits
+WAF on API Gateway & AppSync => rate limiting rules
+More throttling control => API Gateway+AppSync
+SQS+Lambda => maximum concurrency
+API Gateway+SQS/Kinesis => Buffer requests
