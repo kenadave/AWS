@@ -95,4 +95,10 @@ API Gateway+SQS/Kinesis => Buffer requests
 =========================================================================
 
 
+If your Lambda consistently takes longer than 29 seconds, AWS generally recommends these alternatives rather than just increasing the timeout: 
+Asynchronous Pattern: Have the first Lambda function receive the request, trigger a second "worker" Lambda asynchronously, and immediately return a "202 Accepted" response to the client.
+Step Functions: Use AWS Step Functions to manage long-running workflows, allowing the client to poll for a status or receive a notification via Amazon SNS when finished.
+WebSockets: For real-time updates without polling, consider using API Gateway WebSockets.
+
+
 Configuring first in first out (FIFO) queues when last in first out (LIFO) queues would better serve client needs, for example when strict ordering is not required and backlog processing is delaying all new and time sensitive requests resulting in all clients experiencing breached service levels.
