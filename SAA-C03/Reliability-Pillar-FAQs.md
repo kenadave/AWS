@@ -102,3 +102,10 @@ WebSockets: For real-time updates without polling, consider using API Gateway We
 
 
 Configuring first in first out (FIFO) queues when last in first out (LIFO) queues would better serve client needs, for example when strict ordering is not required and backlog processing is delaying all new and time sensitive requests resulting in all clients experiencing breached service levels.
+
+=========================================================================
+
+SAA-C03 Exam Tips:
+Scenario A: "You need to troubleshoot a specific application error that happened 10 minutes ago." → Choose CloudWatch Logs Insights.
+Scenario B: "You need to analyze 2 years of VPC Flow Logs for security auditing with the lowest cost." → Choose S3 + Athena.
+Scenario C: "A business analyst wants to create a QuickSight dashboard from log data." → Choose Athena (it integrates natively as a data source for BI tools).
