@@ -109,3 +109,41 @@ SAA-C03 Exam Tips:
 Scenario A: "You need to troubleshoot a specific application error that happened 10 minutes ago." → Choose CloudWatch Logs Insights.
 Scenario B: "You need to analyze 2 years of VPC Flow Logs for security auditing with the lowest cost." → Choose S3 + Athena.
 Scenario C: "A business analyst wants to create a QuickSight dashboard from log data." → Choose Athena (it integrates natively as a data source for BI tools).
+
+
+=========================================================================
+
+
+1. Native Alarm Actions
+These are built-in options you select when creating the alarm in the CloudWatch Console. They trigger immediately upon a state change (e.g., OK to ALARM). 
+
+SNS Notifications: The most common action; sends messages to people (email/SMS) or downstream services.
+EC2 Actions: Automatically stop, terminate, reboot, or recover an instance.
+Auto Scaling Actions: Triggers scaling policies to add or remove capacity.
+Systems Manager (SSM) Actions: Creates OpsItems or Incidents to track operational issues. 
+
+2. EventBridge: The "Perform Anything Else" Lever 
+While native actions are powerful, they are limited to the list above. For anything else—like running a Lambda function directly or updating a database—you use Amazon EventBridge. 
+
+How it works: Every time an alarm changes state, CloudWatch automatically sends a "State Change" event to the EventBridge default bus.
+Custom Rules: You create an EventBridge Rule that matches those alarm events and sends them to a target, such as:
+AWS Lambda: To execute custom remediation code.
+SSM Automation: To run complex runbooks.
+Step Functions: To orchestrate a multi-step recovery workflow. 
+
+Exam Scenario Summary
+Scenario: "Notify the team via email if CPU is high." → Use SNS.
+Scenario: "Automatically fix a crashed instance." → Use EC2 Reboot/Recover.
+Scenario: "Run a custom Python script to clear disk space." → Use EventBridge to trigger Lambda.
+
+=========================================================================
+
+Amazon EventBridge is recommended when you want to build an application that reacts to events from your own applications, SaaS applications, and AWS services. EventBridge is the only event-based service that integrates directly with third-party SaaS partners. EventBridge also automatically ingests events from over 200 AWS services without requiring developers to create any resources in their account.
+
+=========================================================================
+
+Amazon SNS is recommended for applications that need high fan out (thousands or millions of endpoints). A common pattern we see is that customers use Amazon SNS as a target for their rule to filter the events that they need, and fan out to multiple endpoints.
+
+=========================================================================
+
+Use X-Ray tracing for Amazon CloudWatch Synthetic Canaries and Amazon CloudWatch RUM to analyze the request path from your end user client through your downstream AWS infrastructure.
