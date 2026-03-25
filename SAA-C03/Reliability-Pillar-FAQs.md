@@ -158,5 +158,12 @@ Prebaking your Amazon Machine Image (AMI) can speed up the time to launch them. 
 
 =========================================================================
 
+For Amazon RDS, if you have chosen to encrypt your databases, then your backups are encrypted also. DynamoDB backups are always encrypted. When using AWS Elastic Disaster Recovery, all data in transit and at rest is encrypted. With Elastic Disaster Recovery, data at rest can be encrypted using either the default Amazon EBS encryption Volume Encryption Key or a custom customer-managed key.
+
+=========================================================================
+
 Define your applications in AWS Resilience Hub. Resilience assessments generate code snippets that help you create recovery procedures as AWS Systems Manager documents for your applications and provide a list of recommended Amazon CloudWatch monitors and alarms.
 
+Implement immutability using AWS Backup Vault Lock or Amazon S3 Object Lock to prevent backup data from being altered or deleted during its retention period, protecting against ransomware and malicious deletion.
+
+<img width="1074" height="738" alt="image" src="https://github.com/user-attachments/assets/626294d3-ed08-4346-87dd-32a321e3218c" />
