@@ -181,3 +181,20 @@ Implement immutability using AWS Backup Vault Lock or Amazon S3 Object Lock to p
 | Queue Configuration       | Message Queuing             | Amazon SQS, Amazon SNS        |
 | Monitoring & Troubleshooting| Monitoring Dashboards      | Amazon CloudWatch              |
 
+=========================================================================
+
+To ease multi-Regional deployments and maintain consistency, AWS CloudFormation StackSets can replicate your entire AWS infrastructure across multiple Regions. AWS CloudFormation can also detect configuration drift and inform you when your AWS resources in a Region are out of sync. Many AWS services offer multi-region replication for important workload assets. For example, EC2 Image Builder can publish your EC2 machine images (AMIs) after every build to each Region you use. Amazon Elastic Container Registry (ECR) can replicate your container images to your selected Regions.
+
+=========================================================================
+
+The Bottom Line: For both ElastiCache and EFS, if you need a user in Australia to "write," your application code must handle the long-distance trip to Europe or use a specific "Active-Active" service like MemoryDB to avoid that delay.
+
+If your workload must have local writes in every region, you typically have to move away from the standard SQL/file models to these specific "Multi-Master" services:
+Amazon DynamoDB Global Tables: The most common solution for multi-region active-active writes.
+Amazon Keyspaces: Supports active-active replication, allowing each region to perform reads and writes in isolation.
+Amazon MemoryDB: Recently added multi-region capabilities that support active-active replication for local writes with low latency.
+
+=========================================================================
+
+If your workload uses AWS EventBridge, you may need to forward selected events from your primary Region to your secondary Regions. To do so, specify event buses in your secondary Regions as targets for matched events in your primary Region.
+
