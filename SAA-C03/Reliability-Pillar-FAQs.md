@@ -221,3 +221,7 @@ Implement automatic recovery on EC2 instances that have applications deployed th
 | Replication	    | Synchronous (to Standby)            |	Asynchronous (to Replicas)  |	Synchronous (Multi-AZ)  |
 | Read Access     |	Standby is not readable*	          |Replicas are always readable |	All endpoints readable  |
 | Failover Action |	Automatic (to Standby)              |	Automatic (to Replica)	    | Fully automated by AWS
+
+=========================================================================
+
+AWS Fault Injection Service (AWS FIS) is a fully managed service for running fault injection experiments that can be used as part of your CD pipeline, or outside of the pipeline. AWS FIS is a good choice to use during chaos engineering game days.
