@@ -198,3 +198,26 @@ Amazon MemoryDB: Recently added multi-region capabilities that support active-ac
 
 If your workload uses AWS EventBridge, you may need to forward selected events from your primary Region to your secondary Regions. To do so, specify event buses in your secondary Regions as targets for matched events in your primary Region.
 
+=========================================================================
+
+For stateful server-based workloads deployed to an on-premise data center, you can use AWS Elastic Disaster Recovery to protect your workloads in AWS. If you are already hosted in AWS, you can use Elastic Disaster Recovery to protect your workload to an alternative Availability Zone or Region. Elastic Disaster Recovery uses continual block-level replication to a lightweight staging area to provide fast, reliable recovery of on-premises and cloud-based applications.
+
+=========================================================================
+
+Determine if detailed monitoring for EC2 instances and Auto Scaling is necessary. Detailed monitoring provides one minute interval metrics, and default monitoring provides five minute interval metrics.
+
+Determine if enhanced monitoring for RDS is necessary. Enhanced monitoring uses an agent on RDS instances to get useful information about different process or threads.
+
+=========================================================================
+
+Implement automatic recovery on EC2 instances that have applications deployed that cannot be deployed in multiple locations, and can tolerate rebooting upon failures. Automatic recovery can be used to replace failed hardware and restart the instance when the application is not capable of being deployed in multiple locations. The instance metadata and associated IP addresses are kept, as well as the EBS volumes and mount points to Amazon Elastic File System or File Systems for Lustre and Windows. Using AWS OpsWorks, you can configure automatic healing of EC2 instances at the layer level.
+
+
+=========================================================================
+
+| Feature         |	Amazon RDS (Standard)               |	Amazon Aurora	              | Amazon DynamoDB         | 
+|-----------------|-------------------------------------|-----------------------------|-------------------------|
+| Failover        | Target	Dedicated Standby Instance	| Any Aurora Replica	        | Managed by AWS (Native) | 
+| Replication	    | Synchronous (to Standby)            |	Asynchronous (to Replicas)  |	Synchronous (Multi-AZ)  |
+| Read Access     |	Standby is not readable*	          |Replicas are always readable |	All endpoints readable  |
+| Failover Action |	Automatic (to Standby)              |	Automatic (to Replica)	    | Fully automated by AWS
