@@ -225,3 +225,28 @@ Implement automatic recovery on EC2 instances that have applications deployed th
 =========================================================================
 
 AWS Fault Injection Service (AWS FIS) is a fully managed service for running fault injection experiments that can be used as part of your CD pipeline, or outside of the pipeline. AWS FIS is a good choice to use during chaos engineering game days.
+
+
+<img width="2400" height="998" alt="image" src="https://github.com/user-attachments/assets/167d6ba1-bf7f-4c4f-a6d0-50125a56c2e9" />
+
+=========================================================================
+
+The distinction is that pilot light cannot process requests without additional action taken first, while warm standby can handle traffic (at reduced capacity levels) immediately. Pilot light will require you to turn on servers, possibly deploy additional (non-core) infrastructure, and scale up, while warm standby only requires you to scale up (everything is already deployed and running). Choose between these based on your RTO and RPO needs.
+
+When cost is a concern, and you wish to achieve a similar RPO and RTO objectives as defined in the warm standby strategy, you could consider cloud native solutions, like AWS Elastic Disaster Recovery, that take the pilot light approach and offer improved RPO and RTO targets.
+
+=========================================================================
+
+For the SAA-C03 exam, prioritize Multi-AZ for high availability and Cross-Region Replication for disaster recovery.
+
+
+|Feature          | 	AWS Elastic Disaster Recovery (DRS)	|AWS Backup|
+|-----------------|-------------------------------------  |-----------------------------|
+|Primary Target	|EC2-based workloads & On-prem servers|	Managed Services (RDS, S3, EFS, etc.)|
+|Replication|	Continuous (low RPO in seconds)	|Point-in-time (snapshots at set intervals)|
+|Strategy|	Primarily Pilot Light|	Backup & Restore|
+
+=========================================================================
+To orchestrate complex recovery workflows, consider solutions such as AWS Systems Manager Automations or AWS Step Functions.
+Consider solutions such as Amazon Application Recovery Controller (ARC) to redirect traffic without the need to manually mutate DNS records.
+=========================================================================
