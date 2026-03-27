@@ -27,3 +27,20 @@ Consider using the Disallow Actions as a Root User preventative guard rail for m
 
 Evaluate and implement the detective controls included in the AWS Well-Architected Security Pillar conformance pack for AWS Config, or if using AWS Control Tower, the strongly recommended controls available inside Control Tower.
 
+10) Use AWS Artifact to find documentation and reports aligned to your target frameworks that describe the scope of responsibility covered by AWS and guidance for the remaining scope that is your responsibility. For further service-specific guidance as they align to various framework control statements, see AWS Customer Compliance Guides
+
+11) Help prevent non-compliant resource configurations and actions across your AWS Organizations using service control policies (SCP). Implement rules in AWS Config to monitor and report on non-compliant resources, then switch rules to an enforcement model once confident in their behavior
+
+12) To deploy sets of pre-defined and managed rules that align to your cybersecurity frameworks, evaluate the use of AWS Security Hub CSPM standards as your first option
+
+13)  For example, Amazon GuardDuty stays up to date with industry threat intelligence for detecting anomalous behaviors and threat signatures within your accounts.  Amazon Inspector automatically keeps a database of the CVEs it uses for its continuous scanning features up to date.  Both AWS WAF and AWS Shield Advanced provide managed rule groups that are updated automatically as new threats emerge.
+
+14)  Wherever possible, define your security controls in a declarative way, such as in AWS CloudFormation, and store them in a source control system.  Use DevOps practices to automate the deploying your controls for more predictable releases, automated testing using tools like AWS CloudFormation Guard, and detecting drift between your deployed controls and your desired configuration.
+
+15)  One way to achieve this is by using Service Catalog, where you can publish templates as products that workload teams can incorporate into their own pipeline deployments.
+
+16)  To aid and guide you in performing threat modeling, consider using the **Threat Composer tool**, which aims to your reduce time-to-value when threat modeling.
+
+17)  Some security services, such as **Amazon GuardDuty** and **AWS Security Hub CSPM**, provide their own SNS topics to stay informed about new standards, findings, and other updates for those particular services.
+
+18)  imilarly, if you subscribed to **AWS Enterprise Support**, you will receive weekly updates from your **Technical Account Manager (TAM)** and can schedule a regular review meeting with them.
