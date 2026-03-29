@@ -44,3 +44,23 @@ Evaluate and implement the detective controls included in the AWS Well-Architect
 17)  Some security services, such as **Amazon GuardDuty** and **AWS Security Hub CSPM**, provide their own SNS topics to stay informed about new standards, findings, and other updates for those particular services.
 
 18)  imilarly, if you subscribed to **AWS Enterprise Support**, you will receive weekly updates from your **Technical Account Manager (TAM)** and can schedule a regular review meeting with them.
+
+19) For IoT devices, you can use the **AWS IoT Core credential provider** to request temporary credentials.
+
+20) For on-premises systems or systems that run outside of AWS that need access to AWS resources, you can use **IAM Roles Anywhere**.
+
+21) These short-term credentials can be provided through IAM roles for EC2 instances, execution roles for Lambda functions, Cognito IAM roles for mobile user access, and IoT Core policies for IoT devices. When interfacing with third parties, prefer delegating access to an IAM role with the necessary access to your account's resources rather than configuring an IAM user and sending the third party the secret access key for that user.
+
+22) One way to determine the needed permissions is to review AWS
+CloudTrail logs. You can use this review to create permissions tailored to the actions that the user
+actually performs within AWS. IAM Access Analyzer can automatically generate an IAM policy
+based on access activity. You can use IAM Access Advisor at the organization or account level to
+track the last accessed information for a particular policy.
+
+23) How the Workflow Works
+Request: You select an IAM role or user and a specific time range (up to 90 days).
+Analyze: Access Analyzer scans your CloudTrail logs for that period.
+Review & Refine: It presents a generated JSON policy. You can then replace any placeholders (like ${Region} or ${Account}) with specific values to further tighten security.
+Create: Once refined, you save and attach the new, secure policy.
+
+24)
