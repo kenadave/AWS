@@ -63,4 +63,30 @@ Analyze: Access Analyzer scans your CloudTrail logs for that period.
 Review & Refine: It presents a generated JSON policy. You can then replace any placeholders (like ${Region} or ${Account}) with specific values to further tighten security.
 Create: Once refined, you save and attach the new, secure policy.
 
-24)
+24) Also
+consider using AWS Control Tower, which provides prescriptive managed controls that enrich
+AWS Organizations. You can also define your own controls within Control Tower.
+
+25) 
+Root (Logical Container)
+├── Management Account (Fixed here)
+├── Security OU (Sub-OU)
+│   ├── Log Archive Account (Member)
+│   └── Security Tooling Account (Member)
+└── Workloads OU (Sub-OU)
+    ├── Production OU (Nested OU)
+    │   └── App-Prod Account (Member)
+    └── Development OU (Nested OU)
+        └── App-Dev Account (Member)
+
+26) If you are using AWS Control Tower, you can leverage its controls and landing zones as the
+foundation for your permission guardrails and multi-account environment. The landing zones
+provide a pre-configured, secure baseline environment with separate accounts for different
+workloads and applications. The guardrails enforce mandatory controls around security,
+operations, and compliance through a combination of Service Control Policies (SCPs), AWS Config
+rules, and other configurations
+
+27) A more granular step is to implement privileged access management (PAM) and temporary
+elevated access management (TEAM) techniques.
+
+28) 
