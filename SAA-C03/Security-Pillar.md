@@ -90,3 +90,64 @@ rules, and other configurations
 elevated access management (TEAM) techniques.
 
 28) 
+Why use Trust Policies for Multi-Account Access?
+In a multi-account setup, the Trust Policy is the "handshake" between accounts.
+Account A (Production) has a role called CrossAccountAuditor.
+**The Trust Policy** on that role says: "I trust Account B (Security) to assume this role."
+**The Identity-based Policy** on that same role says: "Once assumed, this role can s3:Get* on all buckets."
+
+29) **AWS Config** can report resources that are misconfigured, and through AWS Config policy checks,
+can detect resources that have public access configured. Services such as **AWS Control Tower**
+and **AWS Security Hub CSPM** simplify deploying detective controls and guardrails across AWS
+Organizations to identify and remediate publicly exposed resources. For example, AWS Control
+Tower has a managed guardrail which can detect if any Amazon EBS snapshots are restorable by
+AWS accounts.
+
+30) Use Trusted Advisor if you want a free, "set it and forget it" report on your overall account security health.
+Use AWS Config if you need to maintain a specific compliance standard and want to automatically shut down public access as soon as a user enables it
+
+31) Cross-account sharing within AWS Organizations is supported by a number of AWS services, such
+as AWS Security Hub CSPM, Amazon GuardDuty, and AWS Backup. These services allow for data to
+be shared to a central account, be accessible from a central account, or manage resources and data
+from a central account. For example, AWS Security Hub CSPM can transfer findings from individual
+accounts to a central account where you can view all the findings. AWS Backup can take a backup
+for a resource and share it across accounts. You can use AWS Resource Access Manager (AWS RAM)
+to share other common resources, such as VPC subnets and Transit Gateway attachments, AWS
+Network Firewall, or Amazon SageMaker AI pipelines.
+
+32) 
+
+| Service | Information Flow | Primary Purpose |
+| :--- | :--- | :--- |
+| **AWS Security Hub** | Member -> Central | Aggregates security alerts and compliance findings. |
+| **AWS Backup** | Central -> Member | Pushes data protection policies down to accounts. |
+| **AWS Trusted Advisor** | Member -> Central | Consolidates best-practice recommendations (Cost, Performance, etc.). |
+
+33) 
+To restrict your account to only share resources within your organization, use service control
+policies (SCPs) to prevent access to external principals. When sharing resources, combine identitybased controls and network controls to create a data perimeter for your organization to help
+protect against unintended access. A data perimeter is a set of preventive guardrails to help verify
+that only your trusted identities are accessing trusted resources from expected networks. These
+controls place appropriate limits on what resources can be shared and prevent sharing or exposing
+resources that should not be allowed. For example, as a part of your data perimeter, you can use
+VPC endpoint policies and the AWS:PrincipalOrgId condition to ensure the identities accessing
+your Amazon S3 buckets belong to your organization. It is important to note that SCPs do not
+apply to service-linked roles or AWS service principals.
+
+34) When using Amazon S3, turn off ACLs for your Amazon S3 bucket and use IAM policies to define
+access control. For restricting access to an Amazon S3 origin from Amazon CloudFront, migrate
+from origin access identity (OAI) to origin access control (OAC) which supports additional features
+including server-side encryption with AWS Key Management Service.
+
+35) 
+| Feature | S3 ACLs (Legacy) | IAM & Bucket Policies (Modern) |
+| :--- | :--- | :--- |
+| **Granularity** | Object-level (Hard to audit at scale) | Bucket/Prefix level (Centralized) |
+| **Ownership** | Depends on who uploaded the file | Bucket Owner always owns everything |
+| **Logic** | Only "Allow" rules | Can "Allow" and "Deny" |
+| **Conditions** | None | IP, Date, MFA, VPC, etc. |
+
+
+36) If you have resources that you shared previously using a resource-based policy, you can use the
+PromoteResourceShareCreatedFromPolicy API or an equivalent to promote the resource
+share to a full AWS RAM resource share.
