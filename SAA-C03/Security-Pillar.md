@@ -151,3 +151,36 @@ including server-side encryption with AWS Key Management Service.
 36) If you have resources that you shared previously using a resource-based policy, you can use the
 PromoteResourceShareCreatedFromPolicy API or an equivalent to promote the resource
 share to a full AWS RAM resource share.
+
+
+37) Using Amazon GuardDuty, you can be alerted when unexpected and potentially unauthorized or malicious activity occurs within your AWS accounts.
+
+38) Alternatively, you can create a CloudTrail Lake, which retains CloudTrail logs for up to seven years and provides a SQL-based querying facility
+
+39) AWS CloudTrail Logs, VPC Flow Logs, and Route 53 resolver query logs are the basic logging sources to support security investigations in AWS. You can also use Amazon Security Lake to collect, normalize, and store this log data in Apache Parquet format and Open Cybersecurity Schema Framework (OCSF), which is ready for querying. Security Lake also supports other AWS logs and logs from third-party sources.
+
+40) For log queries, you can use CloudWatch Logs Insights for data stored in CloudWatch log groups, and Amazon Athena and Amazon OpenSearch Service for data stored in Amazon S3.
+
+41) AWS Security Hub does not ingest raw logs like CloudTrail, DNS, or VPC Flow Logs directly. Instead, it ingests findings—pre-analyzed security alerts—from other AWS services and third-party products.
+
+While GuardDuty acts as a "detective" that scans raw data to find threats, Security Hub acts as a centralized dashboard (like a "city hall") that aggregates those findings into a single view.
+
+Security Hub: Ingests findings (already-detected issues) from:
+AWS Services: GuardDuty, Amazon Inspector, Amazon Macie, and AWS IAM Access Analyzer.
+Security Standards: It runs its own automated configuration checks against frameworks like CIS or PCI DSS using AWS Config data.
+Third-Party Partners: Vulnerability scanners and firewalls from external vendors.
+
+42) To ease capturing and standardizing logs and findings, evaluate Amazon Security Lake in your Log Archive account.
+
+43) Using AWS Organizations, create the Log Archive and Security Tooling accounts under a security organizational unit. If you are using AWS Control Tower to manage your organization, the Log Archive and Security Tooling accounts are created for you automatically.
+
+44) An example of a service that can perform correlation for you is Amazon Detective. Detective performs ongoing ingestion of alerts from various AWS and third-party sources and uses different forms of intelligence to assemble a visual graph of their relationships to aid investigations.
+
+45) 
+Detect (GuardDuty): GuardDuty continuously monitors raw logs (VPC Flow Logs, CloudTrail, etc.). It detects a threat, such as an EC2 instance communicating with a malicious IP address, and generates a Finding.
+
+Aggregate & Prioritize (Security Hub): The finding is automatically sent to Security Hub. Security Hub acts as the "central command center," normalizing the finding into a standard format and ranking its severity against other alerts in your environment.
+
+Investigate (Detective): From within the Security Hub console, you can "pivot" to Amazon Detective with a single click. Detective builds a visual behavior graph that correlates the finding with historical log data to show you the root cause and the full extent of the attacker's activity. 
+
+46) 
