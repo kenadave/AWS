@@ -232,3 +232,9 @@ Investigate (Detective): From within the Security Hub console, you can "pivot" t
 69) Ensure that you understand and audit the use of encryption keys to validate that the access control mechanisms on the keys are appropriately implemented. For example, any AWS service using an AWS KMS key logs each use in AWS CloudTrail. You can then query AWS CloudTrail, by using a tool such as Amazon CloudWatch Logs Insights, to ensure that all uses of your keys are valid.
 
 70) Key policies are the primary way to control access to an AWS KMS key. Additionally, AWS KMS key grants can provide access to AWS services to encrypt and decrypt data on your behalf.
+
+71) If your workload requires the direct use of AWS KMS to encrypt or decrypt data, you should use envelope encryption to protect your data
+
+72) Enable IAM Access Analyzer to automatically review and notify if there are overly broad AWS KMS key policies.
+a.
+Consider using custom policy checks to verify that a resource policy update does not grant public access to KMS Keys.
