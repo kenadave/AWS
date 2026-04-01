@@ -223,4 +223,12 @@ Investigate (Detective): From within the Security Hub console, you can "pivot" t
 
 65) Other features such as sensitive data detection in AWS Glue, Amazon SNS, and Amazon CloudWatch can also be used to detect PII and take mitigating action.
 
-66) 
+66) For data stored in DynamoDB, you can use the Time To Live (TTL) feature to define a per-item expiration timestamp.
+
+67) Another aspect of lifecycle management is recording the history of data as it progresses through your workload, called data provenance tracking
+
+68) For example, you can log metadata about transformations in an Amazon DynamoDB table. Within a data lake, you can keep copies of transformed data in different S3 buckets for each data pipeline stage. Store schema and timestamp information in an AWS Glue Data Catalog.
+
+69) Ensure that you understand and audit the use of encryption keys to validate that the access control mechanisms on the keys are appropriately implemented. For example, any AWS service using an AWS KMS key logs each use in AWS CloudTrail. You can then query AWS CloudTrail, by using a tool such as Amazon CloudWatch Logs Insights, to ensure that all uses of your keys are valid.
+
+70) Key policies are the primary way to control access to an AWS KMS key. Additionally, AWS KMS key grants can provide access to AWS services to encrypt and decrypt data on your behalf.
