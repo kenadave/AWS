@@ -238,3 +238,9 @@ Investigate (Detective): From within the Security Hub console, you can "pivot" t
 72) Enable IAM Access Analyzer to automatically review and notify if there are overly broad AWS KMS key policies.
 a.
 Consider using custom policy checks to verify that a resource policy update does not grant public access to KMS Keys.
+
+73) Amazon S3 Object Lock provides mandatory access control for objects, which prevents them from being deleted or overwritten, even by the root user, until the lock expires. Additionally, Amazon Glacier Vault Lock offers a similar feature for archives stored in Amazon Glacier.
+
+74) You can use Amazon S3 Inventory to audit and report on the replication and encryption status of your S3 objects.
+
+75) With AWS PrivateLink, you can access services across accounts with overlapping IP CIDRs without needing an Internet Gateway or NAT.
