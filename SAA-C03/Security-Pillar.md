@@ -261,4 +261,11 @@ Consider using native mTLS functionality in services like Amazon API Gateway or 
 
 80) AMS takes responsibility for deploying a suite of security detective controls and provides a 24/7 first line of response to alerts. When an alert is initiated, AMS follows a standard set of automated and manual playbooks to verify a consistent response. These playbooks are shared with AMS customers during onboarding so that they can develop and coordinate a response with AMS.
 
-81) 
+81) Consider Amazon CodeGuru Security to help conduct automated code reviews
+
+82) 
+82) Use services like AWS CodeDeploy or AWS ECS to manage canary deployments and monitor the impact of changes.
+
+83) Consider using AWS IAM Access Analyzer to programmatically generate least privilege IAM policies for the pipelines.
+
+84) 
