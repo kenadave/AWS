@@ -193,4 +193,41 @@ the expected growth rate.
 44) You can use tools such as AWS Systems Manager Patch Manager to automate the process of
 system updates, and schedule the activity using AWS Systems Manager Maintenance Windows
 
-45) 
+45) Use AWS Local Zones to run workloads like video rendering. Local Zones allow you to benefit
+from having compute and storage resources closer to end users.
+
+46) Applications like high-resolution live video streaming, high-fidelity audio, and augmented
+reality or virtual reality (AR/VR) require ultra-low-latency for 5G devices. For such applications,
+consider AWS Wavelength. AWS Wavelength embeds AWS compute and storage services within
+5G networks, providing mobile edge computing infrastructure for developing, deploying, and
+scaling ultra-low-latency applications.
+
+47) AWS IoT Greengrass => Use to run local compute, messaging, and
+data caching for connected devices.
+
+48) Use VPC Flow Logs to capture detailed
+information about traffic to and from
+network interfaces in your VPCs. With VPC
+Flow Logs, you can diagnose overly restricti
+ve or permissive security group rules and
+determine the direction of the traffic to and
+from the network interfaces.
+
+49) Reachability Analyzer helps you analyze and
+debug network reachability. Reachability
+Analyzer is a configuration analysis tool that
+allows you to perform connectivity testing
+between a source resource and a destinati
+on resource in your VPCs. This tool helps
+you verify that your network configuration
+matches your intended connectivity.
+
+50) Use Amazon CloudWatch RUM to collect the
+metrics that give you the insights that help
+you identify, understand, and improve user
+experience.
+
+51)  Assess the routing paths in your network to verify that the shortest path between destinations is
+always used. Network Access Analyzer can help you do this
+
+
