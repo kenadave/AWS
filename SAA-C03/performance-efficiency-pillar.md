@@ -172,4 +172,25 @@ TCP-based HTTP/2 protocol for transport and it provides performance benefits suc
 network footprint, compression, efficient binary serialization, support for numerous languages,
 and bi-directional streaming.
 
+42) 
+AWS X-Ray To trace traffic through the application layers
+and identify latency between components
+and dependencies. Use X-Ray service maps
+to see relationships and latency between
+workload components.
+Amazon Relational Database Service
+Performance Insights
+To view database performance metrics and
+identify performance improvements.
+Amazon RDS Enhanced Monitoring To view database OS performance metrics.
 
+43) Set up CloudWatch Synthetic Canaries to mimic browser-based user activities
+programmatically using Linux cron jobs or rate expressions to generate consistent metrics over
+time.
+• Use the AWS Distributed Load Testing solution to generate peak traffic or test the workload at
+the expected growth rate.
+
+44) You can use tools such as AWS Systems Manager Patch Manager to automate the process of
+system updates, and schedule the activity using AWS Systems Manager Maintenance Windows
+
+45) 
