@@ -14,4 +14,17 @@
 
 8) Use AWS Trusted Advisor, which provides guidance to verify whether provisioned resources are aligned with AWS best practices for cost optimization.
 
-9) 
+9) You can use AWS Cost Optimization Hub to understand potential cost-saving opportunities
+consolidated from a centralized location and create data exports for integration with Amazon
+Athena. You can also use the AWS Cost Optimization Hub to deploy the Cost and Usage Dashboard,
+which utilizes Quick for interactive cost analysis and secure cost insight sharing.
+
+10) If you don't have essential skills or bandwidth in your organization, you can work with AWS
+ProServ, AWS Managed Services (AMS), or AWS Partners. You can also use third-party tools but
+ensure you validate the value proposition.
+
+11) Amazon RDS, Amazon Redshift, and Amazon ElastiCache provide a managed database service.
+Amazon Athena, Amazon EMR, and Amazon OpenSearch Service provide a managed analytics
+service.
+
+
