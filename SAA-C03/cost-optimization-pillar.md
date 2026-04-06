@@ -27,4 +27,40 @@ ensure you validate the value proposition.
 Amazon Athena, Amazon EMR, and Amazon OpenSearch Service provide a managed analytics
 service.
 
+12) If desired, you can still export CUR in legacy mode, where you can integrate other processing services such as AWS Glue to prepare the data for analysis and perform data analysis with Amazon Athena using SQL to query the data.
 
+13) Use services such as AWS CloudFormation to verify that resources are tagged when created.
+
+14) You can use AWS Cost Optimization Hub to understand potential cost-saving opportunities consolidated from a centralized location and create data exports for integration with Amazon Athena. You can also use the AWS Cost Optimization Hub to deploy the Cost and Usage Dashboard, which utilizes Quick for interactive cost analysis and secure cost insight sharing.
+
+15) AWS Cost Optimization Hub tells you how to save money in the future, while the Cost and Usage Report (CUR) records exactly how you spent it in the past
+
+16) You can use Amazon EC2 Auto Scaling or Application Auto Scaling to perform the decommissioning process. You can also implement custom code using the API or SDKto decommission workload resources automatically.
+
+17) Modern applications are built serverless-first, a strategy that prioritizes the adoption of serverless services. AWS developed serverless services for all three layers of your stack: compute, integration, and data stores. Using serverless architecture will allow you to save costs during low-traffic periods with scaling up and down automatically.
+
+18) Use Amazon Data Lifecycle Manager: Use lifecycle policies on Amazon Data Lifecycle Manager to automate deletion of Amazon EBS snapshots and Amazon EBS-backed AMIs.
+
+19) For storage resources such as Amazon S3, you can use Amazon S3 Storage Lens, which allows you to see 28 metrics across various categories at the bucket level, and 14 days of historical data in the dashboard by default. You can filter your Amazon S3 Storage Lens dashboard by summary and cost optimization or events to analyze specific metrics.
+
+20) Actionable Recommendations: It provides contextual recommendations directly in the dashboard to help you reduce costs and improve data protection (e.g., suggesting you enable default encryption or delete incomplete multipart uploads).
+Organization-Wide Visibility: You can create a single view that aggregates storage data across hundreds or thousands of accounts, regions, and buckets within your AWS Organization.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Identify "Cold" Buckets: By analyzing activity metrics like retrieval rates, you can find buckets that are no longer being accessed and are prime candidates for archiving or deletion.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Granular Prefix-Level Insights: With advanced settings, you can drill down into specific prefixes (up to billions per bucket) to see which datasets are growing the fastest or are most/least active.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Performance Bottleneck Detection: It includes performance metrics (like 503 error counts and request sizes) to help identify throttling or inefficient request patterns that slow down your applications.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Custom Filtering with Groups: You can use Storage Lens groups to aggregate metrics based on custom filters like object tags, suffixes, or object age to better understand specific datasets.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Daily Data Exports: You can automatically export your metrics in CSV or Parquet format to an S3 bucket or S3 Tables for deeper analysis in Amazon Athena or Amazon QuickSight.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CloudWatch Integration: Advanced metrics can be published to Amazon CloudWatch, allowing you to set alarms when specific thresholds (like a spike in object count or 403 errors) are met.
+
+21) Spot Instances are ideal when there is a queue or buffer in place, or where there are multiple resources working independently to process the requests (for example, Hadoop data processing).
+ Means use spot instances when need to use data sent by queue or buffer.
+
+22) At the end of the two minutes, you have the option to hibernate, stop, or terminate the Spot Instance.
+
+23) 
