@@ -97,3 +97,13 @@ Savings Plans apply second to any remaining eligible usage.
 EC2 Instance Savings Plans are applied before Compute Savings Plans because they have a narrower, more specific scope.
 
 34) 
+
+| Commitment Type | Eligible Services |
+| :--- | :--- |
+| **Compute Savings Plans** | Amazon EC2, AWS Lambda, AWS Fargate |
+| **EC2 Instance Savings Plans** | Amazon EC2 (specific family and region) |
+| **SageMaker Savings Plans** | Amazon SageMaker |
+| **Database Savings Plans** | Amazon Aurora, RDS, DynamoDB, ElastiCache, Redshift (Gen 7+ instances) |
+| **Reserved Instances** | Amazon EC2, RDS, ElastiCache, OpenSearch, Redshift |
+
+35) 
