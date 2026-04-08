@@ -90,4 +90,10 @@ It is recommended to purchase all Savings Plans in an account with no usage or r
 
 31) Monitor the utilization and coverage, but only to detect changes. Do not aim for a specific utilization percent, or coverage percent, as this does not necessarily scale with savings. Ensure that a purchase of Savings Plans results in an increase in coverage, and if there are decreases in coverage or utilization ensure they are quantified and known. For example, you migrate a workload resource to a newer instance type, which reduces utilization of an existing plan, but the performance benefit outweighs the saving reduction.
 
-32) 
+32) Note that On-Demand Capacity reservations (ODCR) are not a pricing discount. Capacity Reservations are charged at the equivalent On-Demand rate, whether you run instances in reserved capacity or not. They should be considered when you need to provide enough capacity for the resources you plan to run. ODCRs don't have to be tied to long-term commitments, as they can be cancelled when you no longer need them, but they can also benefit from the discounts that Savings Plans or Reserved Instances provide.
+
+33) Reserved Instances (RIs) apply first to matching usage.
+Savings Plans apply second to any remaining eligible usage.
+EC2 Instance Savings Plans are applied before Compute Savings Plans because they have a narrower, more specific scope.
+
+34) 
