@@ -106,4 +106,31 @@ EC2 Instance Savings Plans are applied before Compute Savings Plans because they
 | **Database Savings Plans** | Amazon Aurora, RDS, DynamoDB, ElastiCache, Redshift (Gen 7+ instances) |
 | **Reserved Instances** | Amazon EC2, RDS, ElastiCache, OpenSearch, Redshift |
 
-35) 
+35) If your account owns both RI and SP commitments, they will be applied in this order:
+COST07-BP05 Perform pricing model analysis at the management account level
+112
+Cost Optimization Pillar AWS Well-Architected Framework
+1.
+Zonal RI
+2.
+Standard RI
+3.
+Convertible RI
+4.
+Instance Savings Plan
+5.
+Compute Savings Plan
+
+36) It is "Use it or Lose it": If you have a $10/hour commitment but only use $5 of compute between 2:00 PM and 3:00 PM, you still pay $10, and you cannot "roll over" the extra $5 to 4:00 PM [1, 5].
+
+37) If you purchase an SP at the management account level, the savings will be applied based on highest to lowest discount percentage.
+
+Imagine your Management Account has a Compute Savings Plan for $10/hour. Across your linked accounts, you have two different types of instances running:
+Instance A (Linux in US-East-1):
+On-Demand Price: $1.00/hr
+Savings Plan Discount: 50% (SP Price: $0.50/hr)
+Instance B (Windows in US-West-2):
+On-Demand Price: $1.00/hr
+Savings Plan Discount: 25% (SP Price: $0.75/hr)
+
+38) 
