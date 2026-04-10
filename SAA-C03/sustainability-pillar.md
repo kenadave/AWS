@@ -43,3 +43,23 @@ Age: Which instance of that type is using the oldest Launch Template? (Pick that
 | **S3 Glacier Instant Retrieval** | 90 Days | Milliseconds |
 | **S3 Glacier Flexible Retrieval** | 90 Days | 1–5 min (Expedited), 3–5 hrs (Standard), 5–12 hrs (Bulk) |
 | **S3 Glacier Deep Archive** | 180 Days | 12 hrs (Standard), 48 hrs (Bulk) |
+
+64) 
+
+| Storage service | Deduplication mechanism |
+| :--- | :--- |
+| **Amazon S3** | Use AWS Lake Formation FindMatches to find matching records across a dataset (including ones without identifiers) by using the new FindMatches ML Transform. |
+| **Amazon FSx** | Use data deduplication on Amazon FSx for Windows. |
+| **Amazon EBS snapshots** | Snapshots are incremental backups, which means that only the blocks on the device that have changed after your most recent snapshot are saved. |
+
+65) AWS Graviton-based instances which offer the best performance per watt of energy use in Amazon EC2
+
+66) 
+
+| Service | Use Case |
+| :--- | :--- |
+| **AWS Amplify Hosting** | Use as a fully managed CI/CD and hosting service for static websites and server-side rendered web apps. |
+
+67) You can use tools such as AWS Systems Manager Patch Manager to automate the process of system updates, and schedule the activity using AWS Systems Manager Maintenance Windows.
+
+68) 
