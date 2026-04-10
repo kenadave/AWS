@@ -207,4 +207,3 @@ Add a Dynamic (Target Tracking) Policy to handle any surprises and to scale the 
 Buffer based: A buffer-based approach uses producers (components that send messages to the queue), consumers (components that receive messages from the queue), and a queue (which holds messages) to store the messages. Messages are read by consumers and processed, allowing the messages to run at the rate that meets the consumers’ business requirements. By using a buffer-centric methodology, messages from producers are housed in queues or streams, ready to be accessed by consumers at a pace that aligns with their operational demands.
 In AWS, you can choose from multiple services to implement a buffering approach. Amazon Simple Queue Service(Amazon SQS) is a managed service that provides queues that allow a single consumer to read individual messages. Amazon Kinesis provides a stream that allows many consumers to read the same messages.
 
-58) 
