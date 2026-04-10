@@ -133,4 +133,78 @@ Instance B (Windows in US-West-2):
 On-Demand Price: $1.00/hr
 Savings Plan Discount: 25% (SP Price: $0.75/hr)
 
-38) 
+38) Today, we are announcing the Amazon CloudFront Security Savings Bundle, a flexible self-service pricing plan that helps you save up to 30% on your CloudFront bill in exchange for a monthly spend commitment for a 1-year term. The savings bundle also includes free AWS WAF (Web Application Firewall) usage up to 10% of your committed amount. Any additional Standard CloudFront or WAF charges not covered by the CloudFront Security Savings Bundle still apply.
+
+39) VPC Endpoints allow connectivity between AWS services over private networking and can be used to reduce public data transfer and NAT gateway costs. Gateway VPC endpoints have no hourly charges, and support Amazon S3 and Amazon DynamoDB. Interface VPC endpoints are provided by AWS PrivateLink and have an hourly fee and per-GB usage cost.
+•
+NAT gateways provide built-in scaling and management for reducing costs as opposed to a standalone NAT instance. Place NAT gateways in the same Availability Zones as high traffic instances and consider using VPC endpoints for the instances that need to access Amazon DynamoDB or Amazon S3 to reduce the data transfer and processing costs.
+
+40) With AWS Trusted Advisor, you can provision your resources following best practices to improve system performance and reliability, increase security, and look for opportunities to save money.
+
+41) AWS Instance Scheduler allows you to configure the stop and start of your Amazon EC2 and Amazon RDS instances at defined times so that you can meet the demand for the same resources within a consistent time pattern such as every day user access Amazon EC2 instances at eight in the morning that they don’t need after six at night.
+
+42) You can also easily configure schedules for your Amazon EC2 instances across your accounts and Regions with a simple user interface (UI) using AWS Systems Manager Quick Setup. You can schedule Amazon EC2 or Amazon RDS instances with AWS Instance Scheduler and you can stop and start existing instances. However, you cannot stop and start instances which are part of your Auto Scaling group (ASG) or that manage services such as Amazon Redshift or Amazon OpenSearch Service. Auto Scaling groups have their own scheduling for the instances in the group and these instances are created.
+
+43) Not all Auto Scaling features are available when you use launch configurations. For example, you cannot create an Auto Scaling group that launches both Spot and On-Demand Instances or that specifies multiple instance types. You must use a launch template to configure these features.
+
+44) Demand-based dynamic scaling policies
+•
+Simple/Step Scaling: Monitors metrics and adds/removes instances as per steps defined by the customers manually.
+•
+Target Tracking: Thermostat-like control mechanism that automatically adds or removes instances to maintain metrics at a customer defined target.
+
+45) You can also use attribute-based instance type selection (ABS) strategy in Auto Scaling groups, which lets you express your instance requirements as a set of attributes, such as vCPU, memory, and storage. This also allows you to automatically use newer generation instance types when they are released and access a broader range of capacity with Amazon EC2 Spot Instances.
+
+46) Amazon EC2 Fleet and Amazon EC2 Auto Scaling select and launch instances that fit the specified attributes, removing the need to manually pick instance types.
+
+47) 
+
+| Feature | Systems Manager Quick Setup | AWS Instance Scheduler |
+| :--- | :--- | :--- |
+| **Primary Goal** | Simple, "one-click" UI setup for basic schedules. | Advanced, highly customizable automation. |
+| **Supported Services** | EC2 only. | EC2, RDS, Aurora, Neptune, and more. |
+| **Setup Method** | Simple UI within the Systems Manager console. | CloudFormation template that deploys Lambda, DynamoDB, and CloudWatch. |
+| **Complexity** | Low: No code or manual templates needed. | High: Requires managing infrastructure and using a CLI or tagging system. |
+| **Schedules** | Simple daily start/stop (e.g., 9-to-5). | Complex "spanning" schedules (e.g., run 48 hours straight). |
+| **Cost** | Free (standard AWS service usage only). | Paid (costs for Lambda executions and DynamoDB storage). |
+
+48) Instead of manually choosing instance types for your mixed instances group, you can specify a set of instance attributes that describe your compute requirements. As Amazon EC2 Auto Scaling launches instances, any instance types used by the Auto Scaling group must match your required instance attributes. This is known as attribute-based instance type selection.
+
+This approach is ideal for workloads and frameworks that can be flexible about which instance types they use, such as containers, big data, and CI/CD.
+
+49) Demand-based dynamic scaling policies
+•
+Simple/Step Scaling: Monitors metrics and adds/removes instances as per steps defined by the customers manually.
+•
+Target Tracking: Thermostat-like control mechanism that automatically adds or removes instances to maintain metrics at a customer defined target.
+
+50) Time based scaling policies:
+Configure scheduled scaling: For predictable changes in demand, time-based scaling can provide the correct number of resources in a timely manner. It is also useful if resource creation and configuration is not fast enough to respond to changes on demand.
+
+51) If you have regular traffic spikes and applications that take a long time to start, you should consider using predictive scaling. For example, if users start using your workload with the start of the business hours and don’t use after hours, then predictive scaling can add capacity before the business hours which eliminates delay of dynamic scaling to react to changing traffic.
+
+52) Use Scheduled Scaling for 100% predictable events (e.g., "We have a massive sale every Friday at 10 AM").
+Use Predictive Scaling for recurring patterns that might vary in intensity (e.g., "Daily business traffic that fluctuates day-to-day").
+
+53) The Winning Strategy:
+Enable Predictive Scaling to proactively set your "Minimum Capacity" based on historical patterns.
+Add a Dynamic (Target Tracking) Policy to handle any surprises and to scale the group back down to save costs at night.
+
+54) 
+| Feature | Predictive Scaling | Dynamic Scaling |
+| :--- | :--- | :--- |
+| **Nature** | **Proactive**: It acts before the load arrives based on the past. | **Reactive**: It acts after it sees a real-time metric spike. |
+| **Mechanism** | Uses Machine Learning to analyze 14 days of history. | Uses CloudWatch Alarms triggered by real-time thresholds. |
+| **Direction** | **Only Scales Out**: It increases capacity but rarely scales in on its own. | **Scales Out and In**: Excellent at removing instances once the rush is over. |
+| **Ideal For** | Repeatable, cyclical patterns (daily/weekly business hours). | Unexpected spikes or "Scale-In" (saving money when quiet). |
+
+
+55) Implement throttling when your clients perform retries. Implement buffering to store the request and defer processing until a later time.
+
+56) Throttling: If the source of the demand has retry capability, then you can implement throttling. Throttling tells the source that if it cannot service the request at the current time, it should try again later. The source waits for a period of time, and then retries the request. Implementing throttling has the advantage of limiting the maximum amount of resources and costs of the workload. In AWS, you can use Amazon API Gateway to implement throttling.
+
+57) Throttling: If the source of the demand has retry capability, then you can implement throttling. Throttling tells the source that if it cannot service the request at the current time, it should try again later. The source waits for a period of time, and then retries the request. Implementing throttling has the advantage of limiting the maximum amount of resources and costs of the workload. In AWS, you can use Amazon API Gateway to implement throttling.
+Buffer based: A buffer-based approach uses producers (components that send messages to the queue), consumers (components that receive messages from the queue), and a queue (which holds messages) to store the messages. Messages are read by consumers and processed, allowing the messages to run at the rate that meets the consumers’ business requirements. By using a buffer-centric methodology, messages from producers are housed in queues or streams, ready to be accessed by consumers at a pace that aligns with their operational demands.
+In AWS, you can choose from multiple services to implement a buffering approach. Amazon Simple Queue Service(Amazon SQS) is a managed service that provides queues that allow a single consumer to read individual messages. Amazon Kinesis provides a stream that allows many consumers to read the same messages.
+
+58) 
